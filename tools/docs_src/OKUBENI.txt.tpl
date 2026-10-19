@@ -1,5 +1,6 @@
 FABLE III (PC) TÜRKÇE YAMA  -  SÜRÜM {{VERSION}}
 ==============================================
+Resmî olmayan bir fan çevirisidir; Microsoft veya Lionhead Studios ile bağlantılı değildir. Fable III, Microsoft Corporation'ın ticari markasıdır.
 
 !! KURULUMDAN ÖNCE (ÇOK ÖNEMLİ) !!
 1. Bu zip dosyasını ÖNCE BİR KLASÖRE ÇIKARIN (sağ tık > "Tümünü ayıkla"). Zip'in içinden kurulum
@@ -34,7 +35,7 @@ Kurulum, orijinal dosyaları oyun klasöründeki _TR_yedek klasörüne yedekler 
 Kurulum programı ve kaldırıcısı OYUN KLASÖRÜNE kurulmaz (C:\Program Files\Fable3 Turkce Yama); oyun klasöründe
 yalnızca book.babel, gui_normal.bft, _TR_yedek ve (DLC kuruluysa) DLC\99_tr_yama klasörümüz değişir.
 
-DLC METİNLERİ (Understone, Traitors Keep)
+DLC METİNLERİ (Understone, Traitor's Keep)
 Bu DLC'lerin metni ana kitapta değil, DLC arşivlerinin içindedir. Yama o arşivlere DOKUNMAZ; bilgisayarınızda hangi DLC'ler
 kuruluysa yalnızca onların Türkçe metin paketini oyunun DLC\99_tr_yama klasörüne ekler (DLC yoksa klasör eklenmez).
 Co-op oyunda bu paket "farklı DLC" olarak görünebilir; sorun yaşarsanız yamayı kaldırın.
@@ -60,7 +61,7 @@ değiştirmez. Oyun dili İngilizce (UK) olmalıdır (yama en-uk dil klasörün�
 Test EDİLMEMİŞ (desteklenmiyor diye kabul edin): {{UNVERIFIED_TXT}}.
 
 SORUN GİDERME
-- "Yama zaten kurulu" ya da "orijinal değil" uyarısı: Steam'de "Oyun dosyalarının bütünlüğünü doğrula" yamayı siler
+- "Yama zaten kurulu" ya da "orijinal değil" uyarısı: Steam'de "Oyun dosyalarının bütünlüğünü doğrula" yamayı geri alabilir
   (orijinal dosyaları geri yükler); sonra kurulumu yeniden çalıştırın.
 - Oyun açılmıyor / "Wrong executable": oyunu Fable3.exe ile değil, FableLauncher.exe ile başlatın.
 - Altyazı görünmüyor: oyun içi Seçenekler > "Altyazılar" açık olmalı. Uzaktaki konuşmalar oyunun mesafe sınırı

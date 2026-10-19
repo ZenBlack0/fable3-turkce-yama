@@ -1,6 +1,7 @@
 # Fable III Türkçe Yama
 
-**Fable III (PC, Steam)** için tam Türkçe yerelleştirme: menüler, görevler, eşya metinleri ve altyazılar. **Köylü ve muhafız konuşmaları dahil tüm konuşmalarda Türkçe altyazı** gösterilir. Understone ve Traitors Keep DLC metinleri de (kuruluysa) Türkçeleşir. Konuşmalar (ses) İngilizce kalır.
+**Fable III (PC, Steam)** için tam Türkçe yerelleştirme: menüler, görevler, eşya metinleri ve altyazılar. **Köylü ve muhafız konuşmaları dahil tüm konuşmalarda Türkçe altyazı** gösterilir. Understone ve Traitor's Keep DLC metinleri de (kuruluysa) Türkçeleşir. Konuşmalar (ses) İngilizce kalır.
+> Resmî olmayan bir fan çevirisidir; Microsoft veya Lionhead Studios ile bağlantılı değildir. Fable III, Microsoft Corporation'ın ticari markasıdır.
 
 > **Durum: v1.1.0** — 49.273 metin çevrildi; 8.529 metin (özel adlar, krediler, yer tutucular) bilerek değiştirilmedi. Çeviri **yapay zekâ desteğiyle** hazırlanmış ve elden geçirilmiştir; hatalar olabilir, düzeltmelere açıktır.
 
@@ -34,7 +35,7 @@ Ayrıntılı adımlar zip içindeki `OKUBENI.txt` dosyasındadır.
 
 **Önceki sürümden yükseltme:** v1.0.x ya da v1.1.0 öncesi Standart modla kurduysanız yeni kurulum programı bunu "kurulu (eski sürüm)" olarak tanır; *Yeniden kur / onar* ile güncel sürüme geçersiniz. Orijinal yedeğinize dokunulmaz.
 
-**Steam notu:** Steam'de "Oyun dosyalarının bütünlüğünü doğrula" yamayı siler; kurulum programını yeniden çalıştırmanız yeterlidir.
+**Steam notu:** Steam'de "Oyun dosyalarının bütünlüğünü doğrula" yamayı geri alabilir; kurulum programını yeniden çalıştırmanız yeterlidir.
 
 ## Desteklenen oyun sürümü
 
@@ -51,14 +52,14 @@ Oyun dili **İngilizce (UK)** olmalıdır; yama `en-uk` dil klasörünün üzeri
 
 ## DLC desteği
 
-Understone ve Traitors Keep DLC'lerinin metinleri oyunun ana kitabında değil, DLC arşivlerinin içindeki ayrı kitaplarda durur. Yama bu arşivlere **dokunmaz**: kurulum, bilgisayarınızda **hangi DLC'ler kuruluysa** yalnızca onların Türkçe metin paketini oyunun `DLC\99_tr_yama` klasörüne ekler (oyunun kendi DLC düzenine uygun, tüm DLC'lerden sonra yüklenen küçük bir paket). Hiç DLC kurulu değilse bu klasör eklenmez. Kaldırma bu klasörü yalnızca içinde sadece bizim bildiğimiz dosyalar varsa siler.
+Understone ve Traitor's Keep DLC'lerinin metinleri oyunun ana kitabında değil, DLC arşivlerinin içindeki ayrı kitaplarda durur. Yama bu arşivlere **dokunmaz**: kurulum, bilgisayarınızda **hangi DLC'ler kuruluysa** yalnızca onların Türkçe metin paketini oyunun `DLC\99_tr_yama` klasörüne ekler (oyunun kendi DLC düzenine uygun, tüm DLC'lerden sonra yüklenen küçük bir paket). Hiç DLC kurulu değilse bu klasör eklenmez. Kaldırma bu klasörü yalnızca içinde sadece bizim bildiğimiz dosyalar varsa siler.
 
 DLC kitaplarının SHA-256 değerleri doğrulanır; farklı bir DLC sürümünde o DLC atlanır (ana yama yine kurulur):
 
 | DLC | Kitap SHA-256 (orijinal) | Beklenen sonuç SHA-256 |
 |---|---|---|
 | Understone (Day One / DLC1) kitabı | `16000712a304bd6cb8ea4175800d5490369c0995eed70b9f3133b0538c04a55b` | `9a26a9adcb749bc3e241565d321a2cd2a3d1f800729aa112d38f816eaea07e53` |
-| Traitors Keep (DLC2) kitabı | `529aaf16e1455ad55b3570c7d8cb2bc4e6301ddbf4eae81ca9ddd3769762ac11` | `86d2cd99627432cf983d0bca6dc251cca3f525b1045773dfd1e9ee42e784e996` |
+| Traitor's Keep (DLC2) kitabı | `529aaf16e1455ad55b3570c7d8cb2bc4e6301ddbf4eae81ca9ddd3769762ac11` | `86d2cd99627432cf983d0bca6dc251cca3f525b1045773dfd1e9ee42e784e996` |
 
 Çok oyunculu (co-op) oyunda eklenen paket, DLC listesinde "farklı DLC" olarak görünebilir; sorun yaşarsanız yamayı kaldırın ve bize bildirin.
 

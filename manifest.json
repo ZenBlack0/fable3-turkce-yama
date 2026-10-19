@@ -52,7 +52,7 @@
       "desc": "Understone DLC Turkce metinleri"
     },
     "traitors": {
-      "label": "Traitors Keep (DLC2) kitabı",
+      "label": "Traitor's Keep (DLC2) kitabı",
       "src_sha": "529aaf16e1455ad55b3570c7d8cb2bc4e6301ddbf4eae81ca9ddd3769762ac11",
       "out_sha": "86d2cd99627432cf983d0bca6dc251cca3f525b1045773dfd1e9ee42e784e996",
       "bank": "tr_yama_tk",
