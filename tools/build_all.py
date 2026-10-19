@@ -75,6 +75,9 @@ def main():
     exe = os.path.join(out, name + '.exe')
     shutil.copyfile(exe_src, exe)
 
+    step('2a', 'Uçtan uca çıktı denetimi (verify_output.py: üretilen kitaplarda kod/boş kayıt)')
+    run(os.path.join(TOOLS, 'verify_output.py'))
+
     step('2b', 'Kurucu selftest (/SELFTEST, test_selftest.ps1)')
     st = os.path.join(TOOLS, 'installer', 'test_selftest.ps1')
     if os.path.exists(st):

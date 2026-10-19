@@ -24,7 +24,7 @@ GIT_NAME = 'ZenBlack0'
 GIT_EMAIL = '163824246+ZenBlack0@users.noreply.github.com'
 TOOLS = ['babel.py', 'extract.py', 'repack.py', 'font_patch.py', 'build.py', 'build_all.py', 'validate_all.py', 'scan_release.py',
          'gen_docs.py', 'make_github_repo.py', 'qa.py', 'flags.py', 'trtext.py', 'init_translations.py', 'import_public.py',
-         'export_public.py', 'tr_tool.py', 'show.py', 'nuitka_helper.bat', 'init_dlc.py', 'dlc_bnk.py', 'dlc_build.py', 'dlc_package.py']
+         'export_public.py', 'tr_tool.py', 'show.py', 'nuitka_helper.bat', 'init_dlc.py', 'dlc_bnk.py', 'dlc_build.py', 'dlc_package.py', 'verify_output.py']
 
 
 def cp(src_rel, dst_rel=None):

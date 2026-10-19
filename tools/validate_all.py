@@ -70,7 +70,7 @@ def main():
             if len(pub) != len(rows):
                 errors.append(f'tr_public.jsonl satır sayısı {len(pub)} != tr.jsonl {len(rows)} (export_public.py çalıştırın)')
             else:
-                diff = [r['n'] for r, p in zip(rows, pub)
+                diff = [r['n'] for r, p in zip(sorted(rows, key=lambda x: x['n']), sorted(pub, key=lambda x: x['n']))
                         if r['ids'] != p['ids'] or r['status'] != p['status'] or (r['tr'] if r['status'] in ('done', 'review') and r['tr'] else None) != p.get('tr')]
                 if diff:
                     errors.append(f'tr_public.jsonl güncel değil ({len(diff)} satır farklı, örn n={diff[:5]}); export_public.py çalıştırın')

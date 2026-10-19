@@ -1482,7 +1482,7 @@
 {"n": 1481, "ids": ["0x0672E255"], "cat": "items", "status": "done", "tr": "Gözetmen"}
 {"n": 1482, "ids": ["0x0677EE24", "0x0677EE26", "0x0677EE27", "0x2A0F6B7C", "0x2A0F6B7E", "0x2A0F6B7F", "0x2A7723D8", "0x2A7723D9", "0x2A7723DA", "0x2B81624C", "0x2B81624D", "0x2B81624F", "0x317BC9FC", "0x317BC9FD", "0x317BC9FF", "0x355C4925", "0x355C4926", "0x355C4927", "0x5174144C", "0x5174144E", "0x5174144F", "0x549BF6C4", "0x549BF6C5", "0x549BF6C7", "0x59AF1879", "0x59AF187A", "0x59AF187B", "0x6A6E1338", "0x6A6E133A", "0x6A6E133B", "0x6E8C3328", "0x6E8C3329", "0x6E8C332B", "0x72BAF0CC", "0x72BAF0CD", "0x72BAF0CE", "0x7E0FE190", "0x7E0FE191", "0x7E0FE192", "0x7F0FA734", "0x7F0FA735", "0x7F0FA737", "0x8BB9CB28", "0x8BB9CB2A", "0x8BB9CB2B", "0xA1A75EE8", "0xA1A75EE9", "0xA1A75EEA", "0xD3B3E749", "0xD3B3E74A", "0xD3B3E74B", "0xD8B7D99D", "0xD8B7D99E", "0xD8B7D99F", "0xDE0F4318", "0xDE0F4319", "0xDE0F431B", "0xEB28605C", "0xEB28605D", "0xEB28605E"], "cat": "dialog", "status": "keep"}
 {"n": 1483, "ids": ["0x0679DFD7"], "cat": "quest", "status": "done", "tr": "Logan'ın bunu yapması an meselesiydi. Bizi avlamaya karar vermesi. Karşılık vermeliyiz."}
-{"n": 1484, "ids": ["0x067BBCF3"], "cat": "ui", "status": "done", "tr": "%1 ile boşanmak istediğine emin misin?"}
+{"n": 1484, "ids": ["0x067BBCF3"], "cat": "ui", "status": "done", "tr": "%1% ile boşanmak istediğine emin misin?"}
 {"n": 1485, "ids": ["0x067C35EC"], "cat": "dialog", "status": "done", "tr": "Yaşadığım sürece sana sadakatle bağlı kalacağım. Yeter ki nazik ol!"}
 {"n": 1486, "ids": ["0x067C35ED"], "cat": "dialog", "status": "done", "tr": "Seni takip edeceğime güvenebilirsin, gerçekten!"}
 {"n": 1487, "ids": ["0x067FD7D0"], "cat": "quest", "status": "done", "tr": "Bugün Albion'un yeni hükümdarı olarak tacınızı giyiyorsunuz ama işiniz yeni başladı."}
@@ -3383,7 +3383,7 @@
 {"n": 3382, "ids": ["0x0EB67244"], "cat": "dialog", "status": "done", "tr": "Evimiz biraz yorgun görünüyor. Yeniden dekore etmeliyiz ya da belki yeni bir yer denemeliyiz."}
 {"n": 3383, "ids": ["0x0EB67245"], "cat": "dialog", "status": "done", "tr": "Evde biraz sönüklük var. Yeniden dekore etmek ya da belki yeni bir yere taşınmak güzel olur. Sen ne dersin?"}
 {"n": 3384, "ids": ["0x0EB6FE45"], "cat": "dialog", "status": "done", "tr": "Erkek olduğundan emin misin?? Bana kız gibi geliyorsun!"}
-{"n": 3385, "ids": ["0x0EB7A8A8"], "cat": "ui", "status": "done", "tr": "%1 ile iş ortaklığını bitirmek istediğine emin misin?"}
+{"n": 3385, "ids": ["0x0EB7A8A8"], "cat": "ui", "status": "done", "tr": "%1% ile iş ortaklığını bitirmek istediğine emin misin?"}
 {"n": 3386, "ids": ["0x0EB7ED5C"], "cat": "ui", "status": "done", "tr": "Kadın Pijama Geceliği"}
 {"n": 3387, "ids": ["0x0EBFBCA4"], "cat": "dialog", "status": "keep"}
 {"n": 3388, "ids": ["0x0EBFBCA5"], "cat": "dialog", "status": "done", "tr": "Ne olduğuna dair fikri olan var mı?"}
@@ -55812,7 +55812,7 @@
 {"n": 55811, "ids": ["0x193FA3C4"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Highlander Sol Kol Dövmesi"}
 {"n": 55812, "ids": ["0x1C926638"], "cat": "quest", "status": "done", "dlc": "understone", "tr": "Paralı Asker Kampı'na dön."}
 {"n": 55813, "ids": ["0x1CC39C7B", "0x2567E997"], "cat": "ui", "status": "done", "dlc": "understone", "tr": "+ 8 Ekstra Hasar"}
-{"n": 55814, "ids": ["0x1F2AF402"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Talihsizlik Çarkı"}
+{"n": 55814, "ids": ["0x1F2AF402"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Çarkıfelaket"}
 {"n": 55815, "ids": ["0x1FB683C9"], "cat": "ui", "status": "done", "dlc": "understone", "tr": "%1. %2'nin Skoru: %3"}
 {"n": 55816, "ids": ["0x21F8C7B3"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Eski dünyadan geriye hiçbir şey kalmadı. Yeni dünyamızın hayatta kalması için çok çalışın."}
 {"n": 55817, "ids": ["0x21FD1210"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Yüksek skor yapmak için hedefleri süre dolmadan vur!"}
@@ -55875,7 +55875,7 @@
 {"n": 55874, "ids": ["0x49B76FE5"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Neyse. Rahatça etrafa bak. Biraz para harcamaktan da çekinme!"}
 {"n": 55875, "ids": ["0x49FB7F29"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Güçlü olduğunu mu sanıyorsun, savunmasız hayvanları dövüyorsun ha?"}
 {"n": 55876, "ids": ["0x4AB77158"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "İyi stoklanmış tezgâhlar, güler yüzlü satıcılar ve çok ama çok düşük fiyatlar. Önce ben buna tanıtım teklifleri diyorum. Onları bağladıktan sonra işleri tırmandırabiliriz."}
-{"n": 55877, "ids": ["0x4AE88F56"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Talihsizlik Çarkı Kuralları:\n1) Her öldürmede skor çarpanını artırabilirsin.\n2) Vurulursan skor çarpanın sıfırlanır.\n3) Bayılırsan o turdaki skorun kaybolur."}
+{"n": 55877, "ids": ["0x4AE88F56"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Çarkıfelaket Kuralları:\n1) Her öldürmede skor çarpanını artırabilirsin.\n2) Vurulursan skor çarpanın sıfırlanır.\n3) Bayılırsan o turdaki skorun kaybolur."}
 {"n": 55878, "ids": ["0x4AFB809C"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Pişman olacaksın. Sadece onu sinirlendiriyorsun."}
 {"n": 55879, "ids": ["0x4B58F097"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Sanayi Şövalyesi Eldivenleri"}
 {"n": 55880, "ids": ["0x4B61F325"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Kurt Turu!"}
@@ -55906,7 +55906,7 @@
 {"n": 55905, "ids": ["0x573B3620"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Kara Ejderha belki de bütün Albion'un en korkunç silahı. Tabii ben ondan korkmuyorum. Hiç de. ...Yine de umarım sen kazanırsın."}
 {"n": 55906, "ids": ["0x573E94EC"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Saker'in yenilgisinden sonra Mistpeak paralı askerleri yeni bir lider seçti."}
 {"n": 55907, "ids": ["0x5773950B"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Daha iyi bir yarın için bugün çok çalışın."}
-{"n": 55908, "ids": ["0x57AF0614"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Talihsizlik Çarkı bu sefer gerçekte ne diyecek?"}
+{"n": 55908, "ids": ["0x57AF0614"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Çarkıfelaket bu sefer gerçekte ne diyecek?"}
 {"n": 55909, "ids": ["0x57B35587"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Highlander Kadın Kilti"}
 {"n": 55910, "ids": ["0x588D5F7F"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Ah, sizi tekrar görmek ne güzel, Majesteleri."}
 {"n": 55911, "ids": ["0x58AF0787"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Peki bugün neyle savaşacaksın...?"}
@@ -55954,7 +55954,7 @@
 {"n": 55953, "ids": ["0x6CCB2011"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Highlander Sırt Dövmesi"}
 {"n": 55954, "ids": ["0x6D8594FC"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Tebrikler, en yüksek skorunu geçtin ve bunu kazandın. Harika atış!"}
 {"n": 55955, "ids": ["0x6E43A029"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Ölü Ned'in Tabancası"}
-{"n": 55956, "ids": ["0x6E7A203F"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Reaver'ın Talihsizlik Çarkı'ndaki ilk oyununu sağ atlattın. Daha çok ödül kazanmak için hazır olduğunda çarkı yeniden çevir."}
+{"n": 55956, "ids": ["0x6E7A203F"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Reaver'ın Çarkıfelaket'indeki ilk oyununu sağ atlattın. Daha çok ödül kazanmak için hazır olduğunda çarkı yeniden çevir."}
 {"n": 55957, "ids": ["0x6E85966F"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Hey, yeni bir yüksek skor yaptın. Üstüne güzel bir ödül de kazandın! Aferin."}
 {"n": 55958, "ids": ["0x7041FDE2"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Highlander Sol Bacak Dövmesi"}
 {"n": 55959, "ids": ["0x708599B5"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Bu senin için yeni bir rekor. Üstelik kendine bunu kazandın! Tebrikler!"}
@@ -56010,7 +56010,7 @@
 {"n": 56009, "ids": ["0x895F3A11"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Çabalarınızın karşılığı olarak, tüm işçilerin dinlenip ferahlatıcı içeceklerin tadını çıkarabileceği özel bir dinlenme odası yaptırmaya başladım. Bittiği anda haberiniz olacak."}
 {"n": 56010, "ids": ["0x897862E1"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Düşmanlara 200 gösterişle vur."}
 {"n": 56011, "ids": ["0x8A5F3B84"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Alacakaranlıktan şafağa kadar çalışmalıyız. Alacakaranlığın tam ne zaman olduğunu size ben söyleyeceğim, o yüzden zamanı takip etmekle uğraşmayın."}
-{"n": 56012, "ids": ["0x8A8B407F"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Talihsizlik Çarkı Yüksek Skoru"}
+{"n": 56012, "ids": ["0x8A8B407F"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Çarkıfelaket Yüksek Skoru"}
 {"n": 56013, "ids": ["0x8AFE7B44"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Köpek Kostümü"}
 {"n": 56014, "ids": ["0x8B5F3D77"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Bütün ömrünü yeraltında çalışarak geçirmek harika bir şey. Kime sorarsan aynısını söyler. Söylemeyen olursa onunla konuşmayı kes -- sanrıları var, belki de tehlikeli."}
 {"n": 56015, "ids": ["0x8C6C7670"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Buyur -- bu gayet iyiydi! Aslında izlemekten biraz keyif bile aldım. Kim düşünürdü ki bu mümkün?"}
@@ -56107,7 +56107,7 @@
 {"n": 56106, "ids": ["0xB7D3E0B7"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "İşte gidiyor. Neler olduğunu anlaması uzun sürmez. Gidip ona canavar olmadığını söylesen iyi olur. Yoksa başımıza iş açılır."}
 {"n": 56107, "ids": ["0xB86A1DFB"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Nasıl buldunuz bunu, Majesteleri?"}
 {"n": 56108, "ids": ["0xB8D3E22A"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Yurttaşlar, kriz geçene kadar evlerinizde kalın. Sonunda her şey yoluna girecek. Understone güvenli limanınız olmaya devam ediyor."}
-{"n": 56109, "ids": ["0xB91752BC"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Reaver'ın Talihsizlik Çarkı'nı tamamladığın için tebrikler. Seni şöyle buluyoruz..."}
+{"n": 56109, "ids": ["0xB91752BC"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Reaver'ın Çarkıfelaket'ini tamamladığın için tebrikler. Seni şöyle buluyoruz..."}
 {"n": 56110, "ids": ["0xB934F5F9"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Çalışın halkım, çalışın!"}
 {"n": 56111, "ids": ["0xB9D3E39D"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Şu tepedeki evde yaşıyor, bizi izleyip emirlerini konuşma borularıyla gönderiyor -- sesini duymuşsundur, değil mi?"}
 {"n": 56112, "ids": ["0xBA34F76C"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Unutmayın, emeğiniz kurtuluşun anahtarıdır. Ve 'emek' çalışmak demektir."}
@@ -56158,7 +56158,7 @@
 {"n": 56157, "ids": ["0xC7CAEB15"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Oh! Pat pat, tavşancık!"}
 {"n": 56158, "ids": ["0xC7D15EC5"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Kim olursanız olun, uyarıldınız. Bu bölgeye daha fazla girmek çok ölümcül bir savunma tepkisini tetikleyecek."}
 {"n": 56159, "ids": ["0xC8138D89"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "İçtin mi sen? İçmediysen bir dene -- zararı olmaz."}
-{"n": 56160, "ids": ["0xC844E253"], "cat": "quest", "status": "done", "dlc": "understone", "tr": "Tekrar oynamak için Talihsizlik Çarkı'na dön."}
+{"n": 56160, "ids": ["0xC844E253"], "cat": "quest", "status": "done", "dlc": "understone", "tr": "Tekrar oynamak için Çarkıfelaket'e dön."}
 {"n": 56161, "ids": ["0xC8728849"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Ne oldu, Boo?"}
 {"n": 56162, "ids": ["0xC879979C"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Müfettiş"}
 {"n": 56163, "ids": ["0xC88D32D1"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Kişisel altınından 12.000 harca."}
@@ -56172,7 +56172,7 @@
 {"n": 56171, "ids": ["0xCB44E72C"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Odaya gir."}
 {"n": 56172, "ids": ["0xCB728D02"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Ah, hadi ama! Bir öldürme daha ve kötülük kanatlarım çıkacak!"}
 {"n": 56173, "ids": ["0xCBB79413"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Bugünün yarışmacısını paramparça et! İşte bu!"}
-{"n": 56174, "ids": ["0xCC44E89A"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Reaver'ın köşkünün içindeki Talihsizlik Çarkı'na git."}
+{"n": 56174, "ids": ["0xCC44E89A"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Reaver'ın köşkünün içindeki Çarkıfelaket'e git."}
 {"n": 56175, "ids": ["0xCC728EF5"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Bir saniyeliğine kötü olmayı bırakabilir misin?"}
 {"n": 56176, "ids": ["0xCCA7574D"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Elektrik Hilesi"}
 {"n": 56177, "ids": ["0xCCB79586"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Az önce vahşi bir hayvan tarafından parçalandın."}
@@ -56220,14 +56220,14 @@
 {"n": 56219, "ids": ["0xEA9577D3"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Vay!"}
 {"n": 56220, "ids": ["0xEBC4AD7C"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Sanayi Şövalyesi Takımı"}
 {"n": 56221, "ids": ["0xEC79F09E"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Köpek Başı"}
-{"n": 56222, "ids": ["0xECF3FBDD"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Reaver'ın Talihsizlik Çarkı'na hoş geldin. Küçük oyunumu kazanabilirsen büyük ödüller seni bekliyor."}
+{"n": 56222, "ids": ["0xECF3FBDD"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Reaver'ın Çarkıfelaket'ine hoş geldin. Küçük oyunumu kazanabilirsen büyük ödüller seni bekliyor."}
 {"n": 56223, "ids": ["0xED304266"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Şu çılgın ihtiyar Humes bize altın bir fırsat bıraktı. Çok geçmeden zengin olacağız. Bunu bir düşün."}
 {"n": 56224, "ids": ["0xEDFDDEA3"], "cat": "quest", "status": "done", "dlc": "understone", "tr": "Geceleyin 200 düşman öldür."}
 {"n": 56225, "ids": ["0xEEADECD8"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Çaresiz."}
 {"n": 56226, "ids": ["0xEEB02455"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Hafif tehditkâr."}
 {"n": 56227, "ids": ["0xF0DC3EA3"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "İşlerden 20.000 altın kazan."}
 {"n": 56228, "ids": ["0xF1011765"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Hazine Avcısı"}
-{"n": 56229, "ids": ["0xF13F98A7"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Talihsizlik Çarkı skorunu öğrenmek için lütfen ana salona dönün. Teşekkürler."}
+{"n": 56229, "ids": ["0xF13F98A7"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Çarkıfelaket skorunu öğrenmek için lütfen ana salona dönün. Teşekkürler."}
 {"n": 56230, "ids": ["0xF19582D8"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Hey, güzel atış!"}
 {"n": 56231, "ids": ["0xF23D415F"], "cat": "items", "status": "done", "dlc": "understone", "tr": "Yatırımcı"}
 {"n": 56232, "ids": ["0xF23F9A1A"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Aferin, son tur tamamlandı!"}
@@ -56279,7 +56279,7 @@
 {"n": 56278, "ids": ["0x05574917"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Denizcilik ya da disiplini korumak hakkında hiçbir şey bilmiyorsun."}
 {"n": 56279, "ids": ["0x05B513EC"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Merhaba ve geleceğin harika bir vizyonunun sizi beklediği Clockwork Adası'na hoş geldiniz!"}
 {"n": 56280, "ids": ["0x05D11ED0"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ne dersiniz Majesteleri? Buna bir son vermeye hazır mısınız? Muhtemelen tam da Turner'ın istediği şey bu. Sizi bekliyor olacak."}
-{"n": 56281, "ids": ["0x061D9A20"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Günaydın Majesteleri. Güne başlamak için size oldukça hoş bir sürprizim var."}
+{"n": 56281, "ids": ["0x061D9A20"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Günaydın Majesteleri. Güne başlamak için size gayet hoş bir sürprizim var."}
 {"n": 56282, "ids": ["0x06227691", "0x0622769A"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Hayatlarımızı dikte etme hakkını sana ne veriyor? Kahraman kanın mı? Seni bizden daha iyi yaptığını mı sanıyorsun?"}
 {"n": 56283, "ids": ["0x063ABDC9"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Sanırım mahkûmlarla savaşmayı tercih ederdim."}
 {"n": 56284, "ids": ["0x0650A143", "0x0650A148"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ama bu bilgiyi nasıl kullanacağını bilmiyordu. Tanrı olabilecekken neden pis bir canavara dönüşesin?"}
@@ -56309,7 +56309,7 @@
 {"n": 56308, "ids": ["0x0AD4B841"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Herkes Ölür"}
 {"n": 56309, "ids": ["0x0B8CE5AA"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Cezabilimci El Kitabı, Dördüncü Cilt: Sağlık ve Güvenlik Tesisleri. Her hapishanenin steril, iyi stoklanmış ve tam kadrolu bir revire sahip olması gerekir. Temiz ve iyi bakımlı bir reviriniz yoksa, belirli siyasi eğilimleri ve/veya sırtında bir baltası olan Cezaevleri Dairesi temsilcilerinin ziyaretinde finansmanda ağır kesintilerle ya da kınamayla karşılaşabilirsiniz. Bize güvenin. İşleyen bir revirin yan faydası mahkûmlarınızın daha sağlıklı olmasıdır."}
 {"n": 56310, "ids": ["0x0BC0CA57"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Kabadayı"}
-{"n": 56311, "ids": ["0x0BD88E3C"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Elbette. Gerçekten. Bildiğiniz gibi ikinci mahkûm simyacı ve sözde \"cadı\" Mary Godwin. Anlatılanlara göre oldukça pis ve kötü niyetli bir kadın."}
+{"n": 56311, "ids": ["0x0BD88E3C"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Elbette. Gerçekten. Bildiğiniz gibi ikinci mahkûm simyacı ve sözde \"cadı\" Mary Godwin. Anlatılanlara göre bayağı pis ve kötü niyetli bir kadın."}
 {"n": 56312, "ids": ["0x0C7B4DFC"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Eylemleriniz boşuna, çünkü ben yok edilemezim. Geriye dönüp bakınca bu özellik muhtemelen savaş modellerine uygulanmalıydı."}
 {"n": 56313, "ids": ["0x0CC24F6C"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "Yüzbaşı Hadley'e dön."}
 {"n": 56314, "ids": ["0x0CC24F6D"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "Kayıp kitaplar için adayı ara."}
@@ -56333,7 +56333,7 @@
 {"n": 56332, "ids": ["0x0F3F867F"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Öteki dünyanın en dip bölgelerinde dövülen bu şeytani silahın asıl adı Azgın Balinanın Tanrısız Yanan Çekici'ydi. Ama sapına sığmadı."}
 {"n": 56333, "ids": ["0x0FB39E06"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Annen onu kullandı. Kardeşin Logan onu kullandı. Şimdi sizin."}
 {"n": 56334, "ids": ["0x0FCF62D1"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Fester'ın Crocket'ı"}
-{"n": 56335, "ids": ["0x0FD89468"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Büyükbabasının uzun zamandır terk edilmiş, oldukça gösterişli malikânesinde saklandığını düşünüyoruz."}
+{"n": 56335, "ids": ["0x0FD89468"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Büyükbabasının uzun zamandır terk edilmiş, bayağı gösterişli malikânesinde saklandığını düşünüyoruz."}
 {"n": 56336, "ids": ["0x104A708A"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Cömertliğiniz takdire değer. Bu mesaj da ödülünüz."}
 {"n": 56337, "ids": ["0x106910FE"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bunu bir doktorun yapması gerekirdi ama..."}
 {"n": 56338, "ids": ["0x10D895DB"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Hm. Evet. Şey. Anlaşılan iğrenç ölü çağırıcılığına yönelmeden önce gayet dünya görmüş bir aileden geliyormuş."}
@@ -56449,7 +56449,7 @@
 {"n": 56448, "ids": ["0x22EA0785"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Sen Kimsin?"}
 {"n": 56449, "ids": ["0x2342E7EB"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ravenscar Kalesi'ndeki kadim ve akıllı bir kapı bir kaçış planlıyor."}
 {"n": 56450, "ids": ["0x234B4DA9"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Sorununuz yeterince öz farkındalığa sahip olmamanız. Aptal."}
-{"n": 56451, "ids": ["0x23638810"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Korkmayın cesur liderim, taht odası düzgünce temizlendiği anda resmî kraliyet işlerine devam edeceğiz. Dünkü konferans epey pislik bıraktı."}
+{"n": 56451, "ids": ["0x23638810"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Korkmayın cesur liderim, taht odası düzgünce temizlendiği anda resmî kraliyet işlerine devam edeceğiz. Dünkü konferans bayağı pislik bıraktı."}
 {"n": 56452, "ids": ["0x2377C32E"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Hobson'ı kurtarmak istiyorsan acele etmelisin."}
 {"n": 56453, "ids": ["0x23CBB2DB"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Gerçekçi Kal"}
 {"n": 56454, "ids": ["0x23F3EF83"], "cat": "ui", "status": "done", "dlc": "traitors", "tr": "%1 Mahkûm Grubu Kaldı"}
@@ -56473,7 +56473,7 @@
 {"n": 56472, "ids": ["0x26591263"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "Hobson'ı kurtar."}
 {"n": 56473, "ids": ["0x26591266"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "Çılgın mahkûmları yen."}
 {"n": 56474, "ids": ["0x26591267"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "General Turner'ı bul."}
-{"n": 56475, "ids": ["0x26638CE9"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bugün oldukça yoğun ve heyecanlı bir programımız var ama taht odası henüz hazır değil. Şu temizlikçileri gerçekten azarlamalıyım."}
+{"n": 56475, "ids": ["0x26638CE9"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bugün bayağı yoğun ve heyecanlı bir programımız var ama taht odası henüz hazır değil. Şu temizlikçileri gerçekten azarlamalıyım."}
 {"n": 56476, "ids": ["0x26B37FE5", "0x26B37FEE"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Köpeğimi. Rahat. Bırakın."}
 {"n": 56477, "ids": ["0x26FEF9DA"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Suikastçı"}
 {"n": 56478, "ids": ["0x273C3EC7"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "İçimdeki Katil"}
@@ -56554,7 +56554,7 @@
 {"n": 56553, "ids": ["0x33FF3154"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Kocam. \"Seni bekleyeceğim, tatlım.\" Gerçekten bekliyorsa umarım ben burada sonsuza dek kalırım."}
 {"n": 56554, "ids": ["0x340D0429"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Kardeşinizin emrinde bir otomat ordusu olsaydı ne yapacağını bir düşünün."}
 {"n": 56555, "ids": ["0x340F42EF"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "...o yüzden demirciler birliğiyle bir görüşme ayarlayacağım ve bu vergi anlaşmazlığını kısa sürede çözeriz. İki üç günlük müzakere halletmeli."}
-{"n": 56556, "ids": ["0x342B497E"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu tımarhanede yaşamaktansa bir hücrede kalmayı tercih ederim."}
+{"n": 56556, "ids": ["0x342B497E"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu tımarhanede yaşayacağıma bir hücrede kalsam iyi olur."}
 {"n": 56557, "ids": ["0x342BB782"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "Cadı Mary'yi bul."}
 {"n": 56558, "ids": ["0x3436DAAD"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Dikkat edin! O alevler doğal değil!"}
 {"n": 56559, "ids": ["0x343CB6DD"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Umarım meslek sorumluluk sigortam vardır..."}
@@ -56571,13 +56571,13 @@
 {"n": 56570, "ids": ["0x362B4C44"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "O kadar bayat şaraptan sonra kavgaya iştahlarını kaybetmeleri gerekirdi."}
 {"n": 56571, "ids": ["0x36434DF1"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Sabah kızıl gökyüzü... o söz neydi? Ve bu sabah gökyüzü ne renkti?"}
 {"n": 56572, "ids": ["0x3685E338"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Buralara pek kraliyet gelmez. Af ilan etmeye gelmiyorlarsa tabii?"}
-{"n": 56573, "ids": ["0x369A50DE"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ve General Turner gibi bir hainin sadık olduğunu düşününce... Hapse atıldığında general oldukça hasta bir adamdı, şükür yoksa Milton onu serbest bırakabilirdi."}
+{"n": 56573, "ids": ["0x369A50DE"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ve General Turner gibi bir hainin sadık olduğunu düşününce... Hapse atıldığında general bayağı hasta bir adamdı, şükür yoksa Milton onu serbest bırakabilirdi."}
 {"n": 56574, "ids": ["0x36A65B25"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Hadi! Onlara yardım etmeliyiz!"}
 {"n": 56575, "ids": ["0x36A91700"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Demek kardeşin onu bu yüzden kapattı. Ona ordu kurmayı reddetti. Ve onun da senin buraya bunun için geldiğini sanıyor."}
 {"n": 56576, "ids": ["0x370D08E2", "0x390D0BC8"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu teknoloji dışarı çıkarsa ordunun sonu demek. Gerçek bir askere kim ihtiyaç duyar? Kim bir asker olmak ister?"}
 {"n": 56577, "ids": ["0x372B4E37"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Cadı Mary'nin bu yaratıkları evcil hayvan değil, eşit olarak gördüğüne inanmaya başlıyorum."}
 {"n": 56578, "ids": ["0x3763A1DD"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Kaçakların saltanatı... şey... rahatsızlığı bitti ve ülke... hemen hemen eskisi gibi dinlenebilir, gerçekten."}
-{"n": 56579, "ids": ["0x37685F48"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Godwin malikânesi oldukça uzak bir yerde. Büyükbabası çok kapalı bir adam olmalı."}
+{"n": 56579, "ids": ["0x37685F48"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Godwin malikânesi bayağı uzak bir yerde. Büyükbabası çok kapalı bir adam olmalı."}
 {"n": 56580, "ids": ["0x378AABA4"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ejderhalar çoğul olduğundan emin misin? Çünkü bence tek bir tanesini halledebiliriz."}
 {"n": 56581, "ids": ["0x379A52B1"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Komutan Milton'a hiçbir zaman güvenmedim tabii ama yerinize geçerek darbe girişiminde bulunmak... şey, şeytani. Ölümü herkese örnek olmalı."}
 {"n": 56582, "ids": ["0x37CD766C"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Moda Dadaisti"}
@@ -56588,7 +56588,7 @@
 {"n": 56587, "ids": ["0x388AAD17"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bir keresinde eski bir harita gördüm, 'burada ejderhalar var' yazıyordu."}
 {"n": 56588, "ids": ["0x388C93B6", "0x388C93BD"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Yaralısın."}
 {"n": 56589, "ids": ["0x38A91A66"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Yöneticiler isteklerini dilediklerine dayatabileceklerini sanabilir ama ben ölüm yaratmak için değil, hayalleri yaşatmak için doğdum."}
-{"n": 56590, "ids": ["0x38C1FCCA"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Sadece küçük bir ameliyat. En azından eğitimli bir cerrah için öyle. Benim için epey korkutucu."}
+{"n": 56590, "ids": ["0x38C1FCCA"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Sadece küçük bir ameliyat. En azından eğitimli bir cerrah için öyle. Benim için bayağı korkutucu."}
 {"n": 56591, "ids": ["0x392B511D"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu dünyada kaç hobb öldürürsen öldür, hep bir parti daha var."}
 {"n": 56592, "ids": ["0x392F6DF6"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "General Turner'ı yen."}
 {"n": 56593, "ids": ["0x394E9F93"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Nasılsınız? Güzel bir akşam, değil mi?"}
@@ -56848,7 +56848,7 @@
 {"n": 56847, "ids": ["0x652EF160"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bloodstone'lu Reaver'ın resmî heykeltıraşı Arthur Mint tarafından 24 ayar zirkonyumdan dökülmüştür."}
 {"n": 56848, "ids": ["0x65411142"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Mk 2 Fabrika Anahtarı"}
 {"n": 56849, "ids": ["0x654CDEFB"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Oh, anlıyorum -- biraz hapishane kıyafeti giyip havalı mı görünüyorsun? Havalı değil... Aslında öyle. Anlamam bir dakikamı aldı... Geri kalanını da giymelisin."}
-{"n": 56850, "ids": ["0x65720020"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bence iyi bir gardiyan olurdum. Ayakta durmakta epey iyiyimdir."}
+{"n": 56850, "ids": ["0x65720020"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bence iyi bir gardiyan olurdum. Ayakta durmakta bayağı iyiyimdir."}
 {"n": 56851, "ids": ["0x65720024"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bugün hava güzel. Güzel değil demezsen tabii."}
 {"n": 56852, "ids": ["0x65720026"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Beni bırakırsan geniş, gizli bir hazinenin nerede olduğunu söylerim. Altın ve... mücevher falan."}
 {"n": 56853, "ids": ["0x659D27BB"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ben söyleyene kadar harekete geçmiyoruz. Şimdi kesin sesinizi yoksa size gününüzü gösteririm."}
@@ -56907,7 +56907,7 @@
 {"n": 56906, "ids": ["0x6F916A57"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bence hepimiz bir şeyden suçluyuz. Ama suçluların hapishaneye, hapishanelerin de gardiyana ihtiyacı var."}
 {"n": 56907, "ids": ["0x6FB620EE"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "Profesör Faraday'in nerede saklandığını bul."}
 {"n": 56908, "ids": ["0x6FBCB9BA"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Chuckle'ın Flange'i"}
-{"n": 56909, "ids": ["0x70270E98"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Clockwork Adası. Birkaç yıl önce oldukça popüler bir turistik cazibe merkeziydi."}
+{"n": 56909, "ids": ["0x70270E98"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Clockwork Adası. Birkaç yıl önce bayağı popüler bir turistik cazibe merkeziydi."}
 {"n": 56910, "ids": ["0x703CEB14"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Eminim bir mahkûmun hayatında fark yaratabilirim. Belki iki mahkûmun bile!"}
 {"n": 56911, "ids": ["0x703CEB15"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Artık elimizde yalnızca şiddet suçluları kaldığına göre edeplerine dikkat etsinler yoksa onları hırpalarım! Mahkûmları demek istedim. Edepleri değil."}
 {"n": 56912, "ids": ["0x703CEB17"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "O insanları bırakmak mantıklıydı sanırım... Bilmiyorum."}
@@ -56979,7 +56979,7 @@
 {"n": 56978, "ids": ["0x7C3E5793"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Gerçekten her şeyin değişeceğini sanmıştım."}
 {"n": 56979, "ids": ["0x7C3E5797"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Umut etmemem gerektiğini biliyordum. Umut tehlikeli bir şeydir."}
 {"n": 56980, "ids": ["0x7C6C4F04"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ceset Güveleri -- Sonunda kelebeklerin de zombi olabileceğini gösteriyor."}
-{"n": 56981, "ids": ["0x7C96D648"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Cezabilimci El Kitabı, İkinci Cilt: Sağlık ve Hijyen. İnsanlar dar alanlarda toplu halde yaşadığında hijyen hızla acil bir sorun olur. Gerçek şu ki çoğu hapishane mahkûm rahatından çok güvenliği ve düzeni öncelikler, bu gayet iyi ama iklime bağlı olarak yazın oldukça dayanılmaz olabilir. Mahkûmlara düzenli olarak yıkanma ve giysilerini yıkama fırsatı verilmelidir. Üç ayda birden az olursa kendiniz bela istiyorsunuz demektir."}
+{"n": 56981, "ids": ["0x7C96D648"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Cezabilimci El Kitabı, İkinci Cilt: Sağlık ve Hijyen. İnsanlar dar alanlarda toplu halde yaşadığında hijyen hızla acil bir sorun olur. Gerçek şu ki çoğu hapishane mahkûm rahatından çok güvenliği ve düzeni öncelikler, bu gayet iyi ama iklime bağlı olarak yazın bayağı dayanılmaz olabilir. Mahkûmlara düzenli olarak yıkanma ve giysilerini yıkama fırsatı verilmelidir. Üç ayda birden az olursa kendiniz bela istiyorsunuz demektir."}
 {"n": 56982, "ids": ["0x7CAE9BDB"], "cat": "quest", "status": "done", "dlc": "traitors", "tr": "Kayıp hapishane yönetimi kitaplarını arayalım mı?"}
 {"n": 56983, "ids": ["0x7CB49075"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu Faraday."}
 {"n": 56984, "ids": ["0x7CCC32E8"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Birkaç an daha."}
@@ -57032,7 +57032,7 @@
 {"n": 57031, "ids": ["0x85F38FE2"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Hapishanenin, mahkûmların sorunlarını konuşabileceği bir danışmanı olsa harika olurdu. Bazılarına gerçekten yardımı dokunabilir, bir sakıncasını da göremiyorum."}
 {"n": 57032, "ids": ["0x85F38FE3"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bence burada bu kadar perişanlarsa yaptıklarını yapmamalıydılar."}
 {"n": 57033, "ids": ["0x86188029"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Şimdi günün işlerine başlayalım mı?"}
-{"n": 57034, "ids": ["0x86448880"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Sana küçük bir sır vereyim. Aslında epey büyük bir sır! Bu adadan çıkmanın bir yolu var. 825570 numaralı mahkûm metrelerce katı kayanın içinden tünel kazdı."}
+{"n": 57034, "ids": ["0x86448880"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Sana küçük bir sır vereyim. Aslında bayağı büyük bir sır! Bu adadan çıkmanın bir yolu var. 825570 numaralı mahkûm metrelerce katı kayanın içinden tünel kazdı."}
 {"n": 57035, "ids": ["0x864560B1"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Hobson'a ne olduğu umurumda değil ama Turner'ı bulmalıyız. Buradan çıktı."}
 {"n": 57036, "ids": ["0x865ABA4B"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Majesteleri! Bu kadar yolu bize sizi öldürme onurunu vermek için mi geldiniz?"}
 {"n": 57037, "ids": ["0x867BE682"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ah, kralım! Dönüşünüzü sabırsızlıkla bekledim. Olağanüstü bir keşif yaptım!"}
@@ -57045,7 +57045,7 @@
 {"n": 57044, "ids": ["0x871EBE3C"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Dışarıda iyi şanslar, kardeşim!"}
 {"n": 57045, "ids": ["0x873C22C5"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Yüzbaşı! Lanet olsun, ne oldu?"}
 {"n": 57046, "ids": ["0x8775EAC0"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu yürüyen kutulardan bıkmaya başladım."}
-{"n": 57047, "ids": ["0x878F3F5E"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Jeneratör oldukça kabaydı, Faraday'in teknolojisine hiç benzemiyor."}
+{"n": 57047, "ids": ["0x878F3F5E"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Jeneratör bayağı kabaydı, Faraday'in teknolojisine hiç benzemiyor."}
 {"n": 57048, "ids": ["0x880EE91C"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "İşte bu. Medeni bir insanı ancak bu kadar zorlayabilirsiniz."}
 {"n": 57049, "ids": ["0x88448BE6"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Gizlemek için beni üstüne astı ama şimdi kalmaya karar verdi. Özel biriyle tanıştı, ne demek istediğimi anlıyorsun. Ben ne demek istediğimi biliyorum ve keşke bilmeseydim. Neyse, güzel bir tünelin boşa gitmesine dayanamam. Neden kullanmıyorsun? İyi şanslar!"}
 {"n": 57050, "ids": ["0x88456397"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Onu aldı. Turner bizimle oynuyor. Seninle oynuyor. Başından beri istediği buydu. Seni bir tuzağa çekmek."}
@@ -57107,7 +57107,7 @@
 {"n": 57106, "ids": ["0x8E6F367F"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Kaleye kaç masum insan gönderdiniz?"}
 {"n": 57107, "ids": ["0x8E7DDFBB"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu büyücülükten de kötü!"}
 {"n": 57108, "ids": ["0x8EAA937C"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Devam edelim mi, Majesteleri?"}
-{"n": 57109, "ids": ["0x8F0BEDA9"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Oldukça korkunç deneyleri keşfedildikten sonra büyücülükten mahkûm edildi. Bundan sonra ne yapabileceğini düşünmek bile istemiyorum."}
+{"n": 57109, "ids": ["0x8F0BEDA9"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bayağı korkunç deneyleri keşfedildikten sonra büyücülükten mahkûm edildi. Bundan sonra ne yapabileceğini düşünmek bile istemiyorum."}
 {"n": 57110, "ids": ["0x8F0BEDAC"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "General Turner'dan size zaten söz ettim, hepsinin en tehlikelisi. Bu firarı aylardır planlıyor olmalı."}
 {"n": 57111, "ids": ["0x8F0EF401"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Faraday Sanayi'nin gazabını cılız kafanıza salacağım."}
 {"n": 57112, "ids": ["0x8F337ACD"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu akraba ruhları bütün hayatım boyunca inceledim, gerçek doğalarını anlamaya, özlerini yakalamaya çabaladım. İçimdeki tüm insanlığın öleceği, sonunda özgür olup saflar arasında var olacağım gün hızla yaklaşıyor."}
@@ -57128,7 +57128,7 @@
 {"n": 57127, "ids": ["0x907DE281"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bunların bir kısmı bir zamanlar gerçek askerdi. Cesetleri nereden buldu?"}
 {"n": 57128, "ids": ["0x90A805E0"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Hepimizin can yeleği olmalı değil mi? Bilirsin, güvenlik için."}
 {"n": 57129, "ids": ["0x90A9D49B"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Ravenscar Mezarlığı Anahtarı"}
-{"n": 57130, "ids": ["0x90AA9642"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Fütüristik cilanın arkasında ne olduğunu görmeye epey meraklıyım, siz de değil misiniz?"}
+{"n": 57130, "ids": ["0x90AA9642"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Fütüristik cilanın arkasında ne olduğunu görmeye bayağı meraklıyım, siz de değil misiniz?"}
 {"n": 57131, "ids": ["0x90AD81B3"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "O ölü balık mı konuşuyor?"}
 {"n": 57132, "ids": ["0x90C35530"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Hapiste olmamın kendisi sorun değil, asıl derdim hiç çıkamamak."}
 {"n": 57133, "ids": ["0x90C35532"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Burayı alışırım sanmıştım ama henüz olmadı."}
@@ -57239,7 +57239,7 @@
 {"n": 57238, "ids": ["0x9D55F69D"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Birçok ortak noktamız olduğuna ve sağlam dostlar olabileceğimize inanıyorum."}
 {"n": 57239, "ids": ["0x9D580422"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ek bir parça edindiniz ve minnettarlığım sınırsız. Yardım etmeyi kabul ettiğinizde sıfır virgül yetmiş beşti. Şimdi bir virgül sıfır."}
 {"n": 57240, "ids": ["0x9D82B1DE"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ama bebeğim bana kaba davranma, görmüyor musun zaten doldurulmuşum. Aşkının samimi olduğunu söyle, yoksa doldurucu kadar kötüsün."}
-{"n": 57241, "ids": ["0x9DA48CA5"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu mahkûmların çoğu gerçekten oldukça zeki -- göz kulak olmak lazım. Aptallara da dikkat etmek lazım -- o hayvanların kendini tutma yeteneği yok."}
+{"n": 57241, "ids": ["0x9DA48CA5"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu mahkûmların çoğu gerçekten bayağı zeki -- göz kulak olmak lazım. Aptallara da dikkat etmek lazım -- o hayvanların kendini tutma yeteneği yok."}
 {"n": 57242, "ids": ["0x9DA48CA6"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu mahkûmların asla kendilerinden bir şey yapamayacağını düşünmek hata. Tek ihtiyaçları fırsat ve motivasyon."}
 {"n": 57243, "ids": ["0x9DA48CA7"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bir adaya emekli olmayı planlıyordum ama burada çalışmak o fikirden biraz soğuttu beni."}
 {"n": 57244, "ids": ["0x9DE51EF2"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Çabalarınız sayesinde ölümsüzler son cezalarını aldı, son sayımlarına girdi, yeraltı hücrelerine döndü ve son beceriksizce kurulmuş metaforlarını duydu."}
@@ -57357,7 +57357,7 @@
 {"n": 57356, "ids": ["0xB0891BE9"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Evet, ama iyi görünüyor mu?"}
 {"n": 57357, "ids": ["0xB09EC5BF"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Neyden yapıldıkları umurumda değil, hâlâ iğrençler."}
 {"n": 57358, "ids": ["0xB130455A"], "cat": "ui", "status": "done", "dlc": "traitors", "tr": "<star-1.img>: %1/%2"}
-{"n": 57359, "ids": ["0xB19EC712"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Faraday kendine epey bir kale yapmış, değil mi?"}
+{"n": 57359, "ids": ["0xB19EC712"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Faraday kendine hatırı sayılır bir kale yapmış, değil mi?"}
 {"n": 57360, "ids": ["0xB1C74469"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Buradan çıkmayacağım. Asla. Ben sadece... ben değilim..."}
 {"n": 57361, "ids": ["0xB1C7446B"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Artık tek kurtuluşumuz ölüm. Umarım yakında gelir."}
 {"n": 57362, "ids": ["0xB1C7446D"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Mesele anlaşıldı herhalde -- beni bırakabilirler, bir daha asla yanlış bir şey yapmayı düşünmeyeceğim bile."}
@@ -57630,7 +57630,7 @@
 {"n": 57629, "ids": ["0xD8C8B9FE"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bu şeyler malikânede yıllarca yaşamış olmalı."}
 {"n": 57630, "ids": ["0xD917CB21"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bir gün buradan çıkıp güneye gidecek ve bir tekne kiralama işi kuracağım."}
 {"n": 57631, "ids": ["0xD925DED4"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Onlara göz kulak olabilir misin?"}
-{"n": 57632, "ids": ["0xD9713DDA"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Logan'ın hapsettiği bir sürü zararsız siyasi mahkûm var ama yıllar içinde epey tehlikeli kişiler de biriktirdik."}
+{"n": 57632, "ids": ["0xD9713DDA"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Logan'ın hapsettiği bir sürü zararsız siyasi mahkûm var ama yıllar içinde bayağı tehlikeli kişiler de biriktirdik."}
 {"n": 57633, "ids": ["0xD9AF0447"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Devrimci Bir Fikir"}
 {"n": 57634, "ids": ["0xD9C8BB51"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Mary de aynı karşılamayla karşılaştıysa belki yalnızca parçalarını bulabiliriz."}
 {"n": 57635, "ids": ["0xDA713F4D"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Güvenli mi? Son olaylar beni mahkûmlara karşı biraz temkinli yaptı."}
@@ -57722,7 +57722,7 @@
 {"n": 57721, "ids": ["0xEB21B312"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Aslında seninle benim aramda pek fark yok. Sen kilitlisin, ben özgür adamım. Ama ikimiz de buradayız..."}
 {"n": 57722, "ids": ["0xEB21B313"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ben adil bir adamım ama adil davranılmayı hak ediyorum. Devriyelerimde bana atılan kirli tuvalet kâğıdı yağmurları -- onlar durabilir mesela."}
 {"n": 57723, "ids": ["0xEB999CAB"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Kemer Sıkma Konağı"}
-{"n": 57724, "ids": ["0xEC76766B"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Çığlık attığını duyduğunuz adamların çoğu her gün o sandalyelerde otururdu. Buraya gelirken deli değillerse... şey, o şeylerden birine bağlanmaktansa ölmeyi tercih ederim diyelim."}
+{"n": 57724, "ids": ["0xEC76766B"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Çığlık attığını duyduğunuz adamların çoğu her gün o sandalyelerde otururdu. Buraya gelirken deli değillerse... şey, o şeylerden birine bağlanacağıma ölürüm diyelim."}
 {"n": 57725, "ids": ["0xECC98B21"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Ziyaretçi kabul ediyor muyuz hiç? Ediyorsak, 18 ile 26 yaş arası çekici hanımlar olabilir mi?"}
 {"n": 57726, "ids": ["0xECC98B25"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Daha güzel bir hapishaneye nakledilmeye çalışmalısın. Beni de yanında götürmelisin."}
 {"n": 57727, "ids": ["0xED698745"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Her şeyin böyle sonuçlanmasına bayıldım. Oynayacak bir sürü yeni arkadaşım oldu."}
@@ -57770,7 +57770,7 @@
 {"n": 57769, "ids": ["0xFAFAAC63"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "Her Vuruşla Can Kazan"}
 {"n": 57770, "ids": ["0xFAFC3B41"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Tarifte ne kadar kimyon yazdığını unuttum. Neyse ki hiç yok."}
 {"n": 57771, "ids": ["0xFB08879C"], "cat": "items", "status": "done", "dlc": "traitors", "tr": "İnsan Avı"}
-{"n": 57772, "ids": ["0xFB6481C0"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Epey iyi savaşıyorsunuz Majesteleri. Logan'a hiç benzemiyorsunuz."}
+{"n": 57772, "ids": ["0xFB6481C0"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Gayet iyi savaşıyorsunuz Majesteleri. Logan'a hiç benzemiyorsunuz."}
 {"n": 57773, "ids": ["0xFB66B899"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Bütün düzgün insanlar çıktığına göre sertlerin üstüne daha çok gitmem gerekecek sanırım."}
 {"n": 57774, "ids": ["0xFB66B89A"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Birinin doğru olanı yapacağını biliyordum. Zaman meselesiydi."}
 {"n": 57775, "ids": ["0xFB66B89B"], "cat": "dialog", "status": "done", "dlc": "traitors", "tr": "Geriye yalnızca şiddet suçluları kaldı. Başa çıkamayacağım bir şey değil."}

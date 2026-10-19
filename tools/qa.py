@@ -17,9 +17,21 @@ from init_translations import load_jsonl, OUT, ROOT
 from trtext import missing_tokens, tr_lower, tr_upper, is_all_caps, font_charset
 
 ENGLISH_STOP = set('the and you your with for that this have are not will from what was were they them their '
-                   'but can has had his her him she its out who how when where which would could should '
+                   'but has had his him she its out who how when where which would could should '
                    'there here into about than then been being just only'.split())
 OK_CTRL = {'\n', '\xa0'}
+PCT_PAIR = re.compile(r'%[1-9]%')          # '%1%' (kapanış % dahil) tek parça kod: çeviride de aynen kalmalı
+NUM_RX = re.compile(r'\d[\d.,]*\d|\d')
+
+
+def numbers(text):
+    """Metindeki sayılar (kodlar hariç; binlik ayırıcı yok sayılır): kaynakla çeviri aynı sayıları içermeli."""
+    t = re.sub(r'<[^>]+>|%[1-9](?!\d)%?|%[sdfiux]|%[A-Za-z_]+%', ' ', text)
+    out = Counter()
+    for m in NUM_RX.findall(t):
+        m = re.sub(r'[.,](?=\d{3}\b)', '', m)      # binlik ayırıcı
+        out[m.replace(',', '.')] += 1             # ondalık ayırıcı , veya .
+    return out
 
 
 def font_path():
@@ -100,6 +112,10 @@ def run(rows, cats=None):
             err.append(f'{loc} kod eksik {dict(miss)} | {tr[:50]!r}')
         if extra:
             err.append(f'{loc} kod fazla {dict(extra)} | {tr[:50]!r}')
+        if Counter(PCT_PAIR.findall(src)) != Counter(PCT_PAIR.findall(tr)):
+            err.append(f'{loc} "%N%" (kapanış % dahil) eşleşmiyor: {src[:40]!r} -> {tr[:40]!r}')
+        if st != 'keep' and numbers(src) != numbers(tr):
+            warn.append(f'{loc} sayı uyuşmuyor: {src[:50]!r} -> {tr[:50]!r}')
         bad = sorted({c for c in tr if ord(c) not in charset and c not in OK_CTRL})
         if bad:
             err.append(f'{loc} fontta yok: {bad} | {tr[:50]!r}')
@@ -107,7 +123,7 @@ def run(rows, cats=None):
             err.append(f'{loc} null karakter')
         if r['cat'] == 'ui' and len(src) <= 30 and len(tr) > ui_limit(len(src)):
             warn.append(f'{loc} uzun ({len(tr)}>{ui_limit(len(src))}): {src!r} -> {tr!r}')
-        if tr == src and st != 'keep' and any(c.isalpha() for c in src):
+        if tr == src and st != 'keep' and any(c.isalpha() for c in src) and not (r['cat'] in ('items', 'names') and len(src.split()) <= 3 and src[:1].isupper()):
             warn.append(f'{loc} kaynakla aynı: {src[:50]!r}')
         if is_all_caps(src) and tr != tr_upper(tr):
             warn.append(f'{loc} kaynak BÜYÜK HARF, çeviri değil: {tr[:50]!r}')
@@ -143,7 +159,8 @@ if __name__ == '__main__':
     rows = load_jsonl(OUT)
     err, warn, stats = run(rows, a.cat)
     total = sum(stats.values())
-    lines = [f'Metin: {total} | todo {stats["todo"]} | done {stats["done"]} | review {stats["review"]} | keep {stats["keep"]}',
+    ndlc = sum(1 for r in rows if r.get('dlc') and (not a.cat or r['cat'] in a.cat))
+    lines = [f'Metin: {total} (bunların DLC satırı: {ndlc}; DLC dahil denetlenir) | todo {stats["todo"]} | done {stats["done"]} | review {stats["review"]} | keep {stats["keep"]}',
              f'HATA: {len(err)} | UYARI: {len(warn)}', '', '--- HATALAR ---'] + err + ['', '--- UYARILAR ---'] + warn
     os.makedirs(os.path.dirname(a.report), exist_ok=True)
     open(a.report, 'w', encoding='utf-8').write('\n'.join(lines))
