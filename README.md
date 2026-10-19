@@ -3,6 +3,8 @@
 **Fable III (PC, Steam)** için tam Türkçe yerelleştirme: menüler, görevler, eşya metinleri ve altyazılar. **Köylü ve muhafız konuşmaları dahil tüm konuşmalarda Türkçe altyazı** gösterilir. Understone ve Traitor's Keep DLC metinleri de (kuruluysa) Türkçeleşir. Konuşmalar (ses) İngilizce kalır.
 > Resmî olmayan bir fan çevirisidir; Microsoft veya Lionhead Studios ile bağlantılı değildir. Fable III, Microsoft Corporation'ın ticari markasıdır.
 
+> **⚠ Önemli (v1.1.0): kayıtlar ve yamayı kaldırma.** Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir (oyun "You do not have the required downloadable content necessary to load this save game" uyarısı verir). **"Download Now"a basmayın**; yamayı yeniden kurunca kayıtlarınız açılır. Kayıt dosyaları bozulmaz. Düzeltme v1.1.1'de gelecek.
+
 > **Durum: v1.1.0** — 49.273 metin çevrildi; 8.529 metin (özel adlar, krediler, yer tutucular) bilerek değiştirilmedi. Çeviri **yapay zekâ desteğiyle** hazırlanmış ve elden geçirilmiştir; hatalar olabilir, düzeltmelere açıktır.
 
 > **Resmî olmayan bir fan çevirisidir.** Fable III, Microsoft Corporation'ın ticari markasıdır; bu proje Microsoft veya Lionhead Studios ile bağlantılı değildir.
@@ -34,6 +36,8 @@ Ayrıntılı adımlar zip içindeki `OKUBENI.txt` dosyasındadır.
 **Yeniden kurmak / onarmak / kaldırmak:** kurulum programını yeniden çalıştırın; "Yama zaten kurulu" sayfasında *Yeniden kur / onar*, *Yamayı kaldır* ya da *Çık* seçilir. Windows "Yüklü uygulamalar" listesinden *Fable III Türkçe Yama*'yı kaldırmak da aynı işi yapar. Kaldırma, orijinal dosyaları `_TR_yedek` klasöründen geri yükler (SHA-256 ile doğrulanır), kendi DLC klasörümüzü (`DLC\99_tr_yama`) siler ve oyun klasöründeki başka hiçbir dosyaya dokunmaz.
 
 **Önceki sürümden yükseltme:** v1.0.x ya da v1.1.0 öncesi Standart modla kurduysanız yeni kurulum programı bunu "kurulu (eski sürüm)" olarak tanır; *Yeniden kur / onar* ile güncel sürüme geçersiniz. Orijinal yedeğinize dokunulmaz.
+
+**Kayıtlar ve kaldırma (v1.1.0):** Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir ("downloadable content" uyarısı). "Download Now"a basmayın; yamayı yeniden kurunca kayıtlar açılır. Düzeltme v1.1.1'de gelecek.
 
 **Steam notu:** Steam'de "Oyun dosyalarının bütünlüğünü doğrula" yamayı geri alabilir; kurulum programını yeniden çalıştırmanız yeterlidir.
 

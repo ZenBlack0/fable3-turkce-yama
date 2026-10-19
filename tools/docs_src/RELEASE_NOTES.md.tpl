@@ -2,6 +2,7 @@
 
 ## {{TAG}}
 
+- **Bilinen sorun:** Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir ("You do not have the required downloadable content..." uyarısı). **"Download Now"a basmayın**; yamayı yeniden kurunca kayıtlar açılır. Düzeltme v1.1.1'de gelecek.
 - Kurulum programı artık zip içinde dağıtılır: `{{ZIP_NAME}}` (kurulum programı + `OKUBENI.txt` + `SHA256SUMS.txt`).
 - `f3patch.exe` yardımcısı PyInstaller yerine **Nuitka `--standalone` + MSVC** ile derlenir (`--onefile` ve UPX yok); antivirüs yanlış alarm riskini azaltmak için. Sonuçlar: [docs/antivirus.md](antivirus.md).
 - Kuruluma kendi kendini sınama modu eklendi (`/SELFTEST`): gömülü paketleri, `xdelta3`'ü ve `f3patch`'i denetler; orijinal dosyalar verilirse beklenen SHA-256 değerlerini doğrular.
