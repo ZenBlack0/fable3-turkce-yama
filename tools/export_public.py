@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from init_translations import load_jsonl, OUT, ROOT
 
 dst = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'translations', 'tr_public.jsonl')
-rows = load_jsonl(OUT)
+rows = sorted(load_jsonl(OUT), key=lambda r: r['n'])   # sıralı çıktı: aynı çeviri her zaman aynı bayt dizisini üretir
 n_tr = n_keep = 0
 with open(dst, 'w', encoding='utf-8', newline='\n') as f:
     for r in rows:

@@ -113,6 +113,10 @@ def main():
     }
     json.dump(man, open(os.path.join(out, 'manifest.built.json'), 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=2)
 
+    if not a.no_repo and os.path.isdir(os.path.join(ROOT, '.git')):
+        # GitHub deposunun kendisinden (klondan) çalışıyorsunuz: depo klasörü üretecek yerel çalışma alanı yok, depo = bu klasör
+        print('\n(4b atlandı: bu klasör zaten bir git deposu (klon). Yayın öncesi `git status` ile eklenecek dosyaları gözden geçirin.)')
+        a.no_repo = True
     if not a.no_repo:
         step('4b', 'Depo klasörü (make_github_repo.py)')
         run(os.path.join(TOOLS, 'make_github_repo.py'))

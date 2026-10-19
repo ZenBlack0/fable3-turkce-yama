@@ -29,7 +29,7 @@ ORIG_BABEL = os.environ.get('F3_ORIG_BABEL') or os.path.join(ROOT, 'backup', 'bo
 ORIG_FONT = os.environ.get('F3_ORIG_FONT') or os.path.join(ROOT, 'backup', 'gui_normal.bft.orig')
 PUBLIC = os.path.join(ROOT, 'translations', 'tr_public.jsonl')   # paylaşılan çeviri: yalnızca kayıt ID'si + Türkçe
 OVERRIDES = os.path.join(ROOT, 'translations', 'overrides.csv')
-GAME = os.environ.get('F3_GAME', r'C:\deneme\Fable 3')           # yalnızca --test apply.bat için
+GAME = os.environ.get('F3_GAME', '')           # oyun klasörünüz; yalnızca --test apply.bat için (F3_GAME ortam değişkeni)
 
 # Önceki sürümlerin çıktıları: kurucu bunları "kurulu (eski sürüm)" olarak TANIR (onarınca güncel sürüme geçirir; orijinal yedeğe dokunmaz).
 LEGACY_BOOKS = {
@@ -88,8 +88,10 @@ def build(outdir, max_block=0, force=False, test_name=None):
 
 def write_test_bats(dest, name):
     """apply.bat önce mevcut dosyaları _onceki'ye saklar (ilk çalışmada), restore.bat onları geri yükler."""
+    if not GAME:
+        sys.exit('--test için oyun klasörünü F3_GAME ortam değişkeniyle verin (örn. $env:F3_GAME = "D:\\...\\Fable 3").')
     lang = GAME + '\\data\\language\\en-uk'
-    apply = ('@echo off\r\nsetlocal\r\nset "GAME=%s"\r\nset "T=%%~dp0"\r\n' % GAME
+    apply =('@echo off\r\nsetlocal\r\nset "GAME=%s"\r\nset "T=%%~dp0"\r\n' % GAME
              + 'tasklist /FI "IMAGENAME eq Fable3.exe" 2>nul | find /I "Fable3.exe" >nul && (echo Once oyunu kapatin. & pause & exit /b 1)\r\n'
              + 'if not exist "%T%_onceki" (\r\n  mkdir "%T%_onceki"\r\n'
              + '  copy /Y "%GAME%\\data\\language\\en-uk\\text\\book.babel" "%T%_onceki\\book.babel" >nul\r\n'

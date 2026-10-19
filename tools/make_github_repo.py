@@ -57,12 +57,17 @@ def build():
         cp('tools/' + t)
     for rel in ('tools/helper/f3patch.py', 'tools/installer/fable3_tr.iss', 'tools/installer/known_hashes.inc', 'tools/installer/xdelta3/COPYING.txt',
                 'translations/tr_public.jsonl', 'translations/block_map.json', 'translations/overrides.csv',
-                'glossary.csv', 'docs/FORMAT.md', 'docs/STYLE_VILLAGERS.md', '.gitignore'):
+                'glossary.csv', 'docs/FORMAT.md', 'docs/STYLE_VILLAGERS.md', 'docs/GELISTIRICI.md', 'docs/KURULUM_GELISTIRICI.md',
+                'tools/installer/test_safe.ps1', 'tools/installer/test_exe.ps1', 'tools/installer/test_detect.ps1',
+                'tools/installer/test_gui.ps1', 'tools/installer/test_selftest.ps1', 'tools/installer/shot_instpage.ps1',
+                'tools/installer/make_fake_dlc.py', '.gitignore'):
         if rel == '.gitignore':
             cp('tools/repo_files/.gitignore', '.gitignore')
         else:
             cp(rel)
     cp('tools/repo_files/xdelta3_README.md', 'tools/installer/xdelta3/README.md')
+    for n in ('LICENSE', 'LICENSE-TRANSLATION', 'xdelta3_README.md', '.gitignore'):
+        cp('tools/repo_files/' + n)      # gen_docs.py (LICENSE şablonları) klondan da çalışsın
     for n in os.listdir(os.path.join(ROOT, 'tools', 'docs_src')):
         p = os.path.join(ROOT, 'tools', 'docs_src', n)
         if os.path.isfile(p):

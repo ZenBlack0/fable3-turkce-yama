@@ -29,7 +29,7 @@ NAME = f'Fable3_Turkce_Yama_v{VER}'
 DELTA = os.path.join(ROOT, 'tools', 'installer', 'delta')
 BAD_EXT = {'.babel', '.bft', '.orig', '.tex', '.bix', '.nfs', '.fbrb', '.sub', '.hal', '.cat', '.vdf', '.big'}
 ZIP_OK = {NAME + '.exe', 'OKUBENI.txt', 'SHA256SUMS.txt'}
-REPO_TEXT_EXT = {'.tpl', '.bat', '.py', '.md', '.txt', '.csv', '.jsonl', '.json', '.iss', '.inc', '.bat', '.yml', '.yaml', '.toml', '.cfg', '.gitignore', ''}
+REPO_TEXT_EXT = {'.tpl', '.bat', '.py', '.md', '.txt', '.csv', '.jsonl', '.json', '.iss', '.inc', '.bat', '.yml', '.yaml', '.toml', '.cfg', '.gitignore', '', '.ps1'}
 REPO_BIG_OK = {'translations/tr_public.jsonl'}
 DELTA_OK_TOP = {'book_pack.lzma', 'font.xdelta', 'xdelta3.exe', 'xdelta3_COPYING.txt', 'pyinstaller_COPYING.txt',
                 'python_LICENSE.txt', 'nuitka_LICENSE.txt', 'NOTICE.txt', 'f3patch'}

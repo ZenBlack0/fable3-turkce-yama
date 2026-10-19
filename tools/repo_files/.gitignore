@@ -1,0 +1,23 @@
+# Oyun dosyaları ve İngilizce oyun metni ASLA depoya eklenmez
+backup/
+extracted/
+work/
+dist/
+output/
+*.orig
+*.babel
+*.bft
+*.exe
+*.rar
+*.7z
+*.zip
+# yerel çalışma dosyası (İngilizce kaynak içerir)
+translations/tr.jsonl
+translations/quest_names.csv
+translations/*.bak*
+# derleme artıkları
+tools/installer/delta/
+tools/installer/xdelta3/xdelta3.exe
+tools/installer/xdelta3/*.zip
+__pycache__/
+*.pyc

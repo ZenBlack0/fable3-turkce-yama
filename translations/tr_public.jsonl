@@ -5629,7 +5629,6 @@
 {"n": 5628, "ids": ["0x18EA53D7"], "cat": "dialog", "status": "done", "tr": "Zaten bizi yenebileceğini sana düşündüren ne?"}
 {"n": 5629, "ids": ["0x18EA85DF"], "cat": "quest", "status": "done", "tr": "Ama onu açabilecek tek bir şey olduğunu biliyordum."}
 {"n": 5630, "ids": ["0x18EABA6E"], "cat": "ui", "status": "done", "tr": "Kasa"}
-{"n": 55761, "ids": ["0x5277D16F"], "cat": "ui", "status": "done", "tr": "Atla"}
 {"n": 5631, "ids": ["0x18EC83F3"], "cat": "quest", "status": "done", "tr": "Ah, biraz güç koy! Öyle değil!"}
 {"n": 5632, "ids": ["0x18F25F16", "0x29EC9C7E", "0x4AC270C6", "0x9A4F5030", "0x9A4F5037", "0x9AF921AE", "0x9AF921AF", "0x9EC8D175", "0xA14F5B3A", "0xA14F5B3D", "0xB7DF0538", "0xB8824522", "0xB8824523", "0xE2669889"], "cat": "quest", "status": "done", "tr": "Evet!"}
 {"n": 5633, "ids": ["0x18F25F17", "0x4173DBD6", "0xB1EBE40B", "0xBAEBF266", "0xDB15DFD8", "0xE22AB18D"], "cat": "dialog", "status": "done", "tr": "Ah evet!"}
@@ -55760,6 +55759,7 @@
 {"n": 55758, "ids": ["0xFFFC9F6E"], "cat": "dialog", "status": "done", "tr": "Hâlâ aynı yerde olduğuma inanamıyorum!"}
 {"n": 55759, "ids": ["0xFFFC9F6F"], "cat": "dialog", "status": "done", "tr": "Gerçekten fark yaratıyor!"}
 {"n": 55760, "ids": ["0xFFFF9BE0"], "cat": "ui", "status": "done", "tr": "Boş Yuva"}
+{"n": 55761, "ids": ["0x5277D16F"], "cat": "ui", "status": "done", "tr": "Atla"}
 {"n": 55762, "ids": ["0x0037F4F6"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Evet."}
 {"n": 55763, "ids": ["0x0137F669"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "Fikir onlara vurmak. Sadece söylüyorum."}
 {"n": 55764, "ids": ["0x013B9ED1"], "cat": "dialog", "status": "done", "dlc": "understone", "tr": "O sesi duyuyor musun? Tabii ki duyuyorsun. Herkes duyuyor. Aklı başında en iyi işçiyi bile delirtmeye yeter."}

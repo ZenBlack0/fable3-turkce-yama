@@ -3,6 +3,7 @@ backup/
 extracted/
 work/
 dist/
+output/
 *.orig
 *.babel
 *.bft
