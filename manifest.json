@@ -1,0 +1,65 @@
+{
+  "name": "Fable III Türkçe Yama",
+  "version": "1.1.0",
+  "tag": "v1.1.0",
+  "company": "ZenBlack0",
+  "copyright_holder": "Kerim",
+  "repo": "ZenBlack0/fable3-turkce-yama",
+  "supported": [
+    {
+      "id": "steam-en-uk",
+      "label": "Steam (App 105400), dil: İngilizce (UK)",
+      "verified": true,
+      "files": {
+        "data/language/en-uk/text/book.babel": "1a588553b9dde08b3aa37d609f5e2ec9a9a9f2cb8f0d93bb3b93cdeca2e7afc3",
+        "data/language/en-uk/fonts/gui_normal.bft": "913cf1699e2fc3b612f18ee88957f44451abf8bbe88df0bf6c5d075ec6e8f0a3"
+      }
+    }
+  ],
+  "unverified": [
+    "Perakende (DVD) sürümü",
+    "Games for Windows LIVE sürümü",
+    "Başka bir Steam yama revizyonu"
+  ],
+  "outputs": {
+    "book": "3eba8894429ac5ffb35e750ae1edba59192e131724c005c128e5700bdcb66754",
+    "font": "a88867207aacaa772a2f36d60ba576671cd21a7e965fb19ad6f7429818690e08"
+  },
+  "build": {
+    "python": "3.14",
+    "note": "book.babel zlib çıktısı Python/zlib sürümüne bağlıdır; çıktı hash'leri build sırasında doğrulanır."
+  },
+  "package": {
+    "exe": {
+      "name": "Fable3_Turkce_Yama_v1.1.0.exe",
+      "sha256": "300fcbb1eeabcdce1cb10165eee6e79bd6665f3e1f3db9b16e5384bfdfb7058f",
+      "size": 9297751
+    },
+    "zip": {
+      "name": "Fable3_Turkce_Yama_v1.1.0.zip",
+      "sha256": "7a6b2b19329d77236ba8c9677b391175ca65240b5f94d704c9539473fd8f16d9",
+      "size": 8739568
+    }
+  },
+  "dlc": {
+    "understone": {
+      "label": "Understone (Day One / DLC1) kitabı",
+      "src_sha": "16000712a304bd6cb8ea4175800d5490369c0995eed70b9f3133b0538c04a55b",
+      "out_sha": "9a26a9adcb749bc3e241565d321a2cd2a3d1f800729aa112d38f816eaea07e53",
+      "bank": "tr_yama_us",
+      "uid": 120,
+      "order": 10000,
+      "desc": "Understone DLC Turkce metinleri"
+    },
+    "traitors": {
+      "label": "Traitors Keep (DLC2) kitabı",
+      "src_sha": "529aaf16e1455ad55b3570c7d8cb2bc4e6301ddbf4eae81ca9ddd3769762ac11",
+      "out_sha": "86d2cd99627432cf983d0bca6dc251cca3f525b1045773dfd1e9ee42e784e996",
+      "bank": "tr_yama_tk",
+      "uid": 121,
+      "order": 10001,
+      "desc": "Traitors Keep DLC Turkce metinleri"
+    }
+  },
+  "dlc_translated": true
+}

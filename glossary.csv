@@ -1,0 +1,105 @@
+﻿# YER ADI KURALI: Özel yer adları aynen kalır (Bowerstone, Brightwall, Mistpeak, Mourningwood, Silverpines, Millfields, Driftwood vb.). Yalnızca genel kısımlar çevrilir (Village -> Köyü, Valley -> Vadisi, Castle -> Kalesi). Tamamen betimleyici adlar çevrilebilir (Sunset House -> Günbatımı Evi, Shifting Sands -> Kayan Kumlar).
+kategori,orijinal_terim,turkce_karsilik,durum,not
+Karakter,Hero,Kahraman,Onaylandı,Oyuncunun yönettiği ana karakter
+Karakter,Guildmaster,Lonca Üstadı,Onaylandı,Lonca lideri ve rehber
+Karakter,Theresa,Theresa,Korunmalı,Karakter özel adı (çevrilmez)
+Karakter,Walter Beck,Walter Beck,Korunmalı,Karakter özel adı (çevrilmez)
+Karakter,Logan,Logan,Korunmalı,Karakter özel adı (kral/kardeş)
+Karakter,Jasper,Jasper,Korunmalı,Sığınak uşağı
+Karakter,Reaver,Reaver,Korunmalı,Karakter özel adı (çevrilmez)
+Karakter,Major Swift,Binbaşı Swift,Onaylandı,Askeri rütbe + isim
+Karakter,Ben Finn,Ben Finn,Korunmalı,Karakter özel adı (çevrilmez)
+Karakter,Page,Page,Korunmalı,Direniş lideri
+Karakter,Kalin,Kalin,Korunmalı,Aurora lideri
+Karakter,The Crawler,Sürünen,Onaylandı,Ana karanlık varlık / boss
+Yer,Albion,Albion,Korunmalı,Ana kıta/diyar adı (çevrilmez)
+Yer,Aurora,Aurora,Korunmalı,Çöl kıtası adı (çevrilmez)
+Yer,Bowerstone,Bowerstone,Korunmalı,Başkent ve ana şehir (çevrilmez)
+Yer,Bowerstone Castle,Bowerstone Kalesi,Onaylandı,Kale adı
+Yer,Bowerstone Market,Bowerstone Pazarı,Onaylandı,Şehir bölgesi
+Yer,Bowerstone Old Town,Eski Bowerstone,Onaylandı,Şehir bölgesi
+Yer,Bowerstone Industrial,Bowerstone Sanayi Bölgesi,Onaylandı,Fabrikalar bölgesi
+Yer,Brightwall Village,Brightwall Köyü,Onaylandı,Köy adı
+Yer,Mistpeak Valley,Mistpeak Vadisi,Onaylandı,Dağlık bölge
+Yer,Dweller Camp,Göçebe Kampı,Onaylandı,Mistpeak göçebeleri
+Yer,Mourningwood,Mourningwood,Korunmalı,Bölge adı (orijinal korunur)
+Yer,Sunset House,Günbatımı Evi,Onaylandı,Gizemli malikane
+Yer,Silverpines,Silverpines,Korunmalı,Yer adı (aynen)
+Yer,Millfields,Millfields,Korunmalı,Soylular bölgesi
+Yer,Driftwood,Driftwood,Korunmalı,Ada/kıyı bölgesi
+Yer,Shifting Sands,Kayan Kumlar,Onaylandı,Aurora çöl bölgesi
+Yer,City of Aurora,Aurora Şehri,Onaylandı,Çöl şehri
+Yer,The Sanctuary,Sığınak,Onaylandı,Pause menüsü yerine kullanılan oda
+Yer,Road to Rule,Hükümdarlık Yolu,Onaylandı,Karakter gelişim portalı / yolu
+Mekanik,Guild Seal,Lonca Mührü,Onaylandı,Yetenek puanı para birimi
+Mekanik,Will,İrade,Onaylandı,Büyü gücü
+Mekanik,Strength,Kuvvet,Onaylandı,Yakın dövüş gücü
+Mekanik,Skill,Beceri,Onaylandı,Menzilli saldırı yeteneği
+Mekanik,Spell Weaving,Büyü Harmanlama,Onaylandı,İki eldiven büyüsünü birleştirme
+Mekanik,Gauntlet,Eldiven,Onaylandı,Büyü eldiveni
+Mekanik,Morality,Ahlak,Onaylandı,İyi/kötü karakter dengesi
+Mekanik,Purity,Safiyet,Onaylandı,Karakter görünüm dengesi
+Mekanik,Corruption,Yozlaşma,Onaylandı,Karakter görünüm dengesi
+Mekanik,Gnome,Bahçe Cücesi,Onaylandı,Koleksiyon eşyası; çoğul: Bahçe Cüceleri
+Mekanik,Silver Key,Gümüş Anahtar,Onaylandı,Koleksiyon/sandık anahtarı
+Mekanik,Gold Key,Altın Anahtar,Onaylandı,Özel hazine anahtarı
+Mekanik,Expression,İfade,Onaylandı,Sosyal etkileşim eylemleri
+Eşya,Health Potion,Can İksiri,Onaylandı,Standart iksir
+Eşya,Slow Time Potion,Zamanı Yavaşlatma İksiri,Onaylandı,Büyülü iksir
+Eşya,Summon Creatures Potion,Yaratık Çağırma İksiri,Onaylandı,Büyülü iksir
+Düşman,Hollow Man,Kof Adam,Onaylandı,İskelet türü düşmanlar
+Düşman,Balverine,Balverin,Onaylandı,Kurtadam benzeri yaratıklar
+Düşman,Hobbe,Hobb,Onaylandı,Küçük goblin yaratıklar
+Düşman,Mercenary,Paralı Asker,Onaylandı,Düşman insan grubu
+Düşman,Shadow Creature,Gölge Yaratığı,Onaylandı,Aurora karanlık düşmanları
+Mekanik,Gnomes,Bahçe Cüceleri,Onaylandı,Gnome çoğulu
+Mekanik,Pawnbroker,Rehinci,Onaylandı,Eşya alım-satım esnafı
+Yer,Dressing Room,Giyinme Odası,Onaylandı,Sığınak odası
+Mekanik,Blades,Kılıçlar,Onaylandı,Büyü adı
+Mekanik,Force Push,İtiş,Onaylandı,Büyü adı
+Mekanik,Fireball,Ateş Topu,Onaylandı,Büyü adı
+Mekanik,Ice Storm,Buz Fırtınası,Onaylandı,Büyü adı
+Mekanik,Shock,Şok,Onaylandı,Büyü adı
+Mekanik,Vortex,Girdap,Onaylandı,Büyü adı
+Mekanik,Quest,Görev,Onaylandı,
+Mekanik,Gold,Altın,Onaylandı,Para birimi
+Mekanik,Hub,Merkez,Onaylandı,Sığınak içi gezinme
+Mekanik,Fast Travel,Hızlı Yolculuk,Onaylandı,
+Yer,Wardrobe,Gardırop,Onaylandı,Sığınak odası
+Yer,Treasury,Hazine,Onaylandı,
+Yer,Vault (kasa),Kasa,Onaylandı,Hazine/saklama anlamı: Sığınak menü kategorisi, "kasa anahtarı" gibi nesne cümleleri
+Mekanik,Vault (eylem),Atla,Onaylandı,Engelden/çıkıntıdan atlama: etkileşim etiketi (blok 14) ve savaş etiketi "Vault Line Kill" -> "Atlayarak Öldürme"
+Mekanik,Ledger,Defter,Onaylandı,
+Mekanik,Stature,Statü,Onaylandı,Hero durumu
+Mekanik,Promise,Söz,Onaylandı,Örn. Brightwall Sözü
+Mekanik,Partnership,Ortaklık,Onaylandı,İlişki türü
+Mekanik,Orb,Küre,Onaylandı,Çok oyunculu
+Mekanik,Orb Chat,Küre Sohbeti,Onaylandı,
+Mekanik,Haggle,Pazarlık,Onaylandı,
+Karakter,Nanny,Dadı,Onaylandı,
+Mekanik,Co-op,Ortak Oyun,Onaylandı,
+Eşya,Dyes,Boyalar,Onaylandı,
+Yer,Family Home,Aile Evi,Onaylandı,
+Mekanik,Benchmark,Performans Testi,Onaylandı,
+Düşman,Sand Fury,Kum İfriti,Onaylandı,Aurora düşmanı; çoğul: Kum İfritleri
+Yer,Shattered Spire,Yıkık Kule,Onaylandı,Tattered Spire de aynı
+Yer,Spire,Kule,Onaylandı,Spire Guards = Kule Muhafızları
+Eşya,Flintlock Pistol,Çakmaklı Tabanca,Onaylandı,
+Eşya,Flintlock Rifle,Çakmaklı Tüfek,Onaylandı,
+Eşya,Clockwork Pistol,Kurmalı Tabanca,Onaylandı,Clockwork = Kurmalı
+Eşya,Clockwork Rifle,Kurmalı Tüfek,Onaylandı,
+Karakter,Henchman,Yardımcı,Onaylandı,
+Düşman,Nightcrawler,Gece Sürünen,Onaylandı,
+Eşya,Crossbow,Arbalet,Onaylandı,
+Eşya,Blunderbuss,Tromblon,Onaylandı,
+Eşya,Turret Pistol,Taretli Tabanca,Onaylandı,Turret = Taretli
+Mekanik,Augment,Geliştirme,Onaylandı,
+Mekanik,Renown,Şöhret,Onaylandı,
+Karakter,Trader,Tüccar,Onaylandı,
+Düşman,Hobbes,Hobblar,Onaylandı,Hobbe çoğulu
+Kişilik,Posh,Kenter,Onaylandı,Kübar kullanılmaz
+Kişilik,Promiscuous,Çapkın,Onaylandı,
+Unvan,The Casanova,Kazanova,Onaylandı,Çapkın ile çakışmasın
+Dil,Hobb (ses uyumu),hobbun / hobba / hobbu,Onaylandı,"hobbın" yanlış
+Mekanik,Triumvirate,Triumvira,Onaylandı,TDK karşılığı
+Mekanik,Block (savunma),Blokla / Blok,Onaylandı,"Savunma anlamında her yerde bloklamak/blok kullanılır (Attacks Blocked -> Bloklanan Saldırılar, Timed Block -> Zamanlı Blok); savuşturma kullanılmaz"
