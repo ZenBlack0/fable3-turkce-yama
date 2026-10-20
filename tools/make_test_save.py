@@ -1,4 +1,4 @@
-r"""Kayıt/DLC-paketi testi için paket üretir (BAKIMCI aracı, depoya girmez): work\tests\testSAVE\
+r"""Kayıt/DLC-paketi testi için paket üretir (BAKIMCI aracı; üretilen paketler tests\oyun_ici\paketler\ altına yazılır ve depoya GİRMEZ, .gitignore'dadır): tests\oyun_ici\paketler\
 Sorun: v1.1.0'ın DLC\99_tr_yama paketi kayda 'zorunlu paket' (RequiredPackage 120/121) olarak yazılıyor; yama kaldırılınca kayıt
 "required downloadable content" uyarısı veriyor.
 
@@ -19,7 +19,7 @@ import dlc_build
 import dlc_package
 from init_translations import ROOT, load_jsonl
 
-KIT = os.path.join(ROOT, 'work', 'tests', 'testSAVE')
+KIT = os.path.join(ROOT, 'tests', 'oyun_ici')
 
 
 def banks_for(variant, books, defs):

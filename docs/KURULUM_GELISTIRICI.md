@@ -103,7 +103,7 @@ python tools\build_all.py
 
 Adımlar: [1] `validate_all` → [2] `build.py --exe` (çeviri paketi, `font.xdelta`, `f3patch` Nuitka derlemesi, Inno Setup; çıktı hash'leri **doğrulanır**) → [2a] `verify_output` (üretilen kitaplarda kod/boş kayıt denetimi) → [2b] kurucu `/SELFTEST` → [3] zip → [4] `output\SHA256SUMS.txt` → [5] `scan_release` (pakette/depoda İngilizce oyun metni, oyun dosyası uzantısı taraması). Klon içinde "4b" (depo klasörü üretimi) atlanır çünkü klasör zaten bir git deposudur; `scan_release` bu durumda `dist\github_repo` yok uyarısı verir, sorun değildir.
 
-**v1.1.0 için doğrulanmış sonuç** (depo klonundan, yalnızca orijinal oyun dosyaları ve bu araçlarla): `book.babel` `3eba8894429ac5ffb35e750ae1edba59192e131724c005c128e5700bdcb66754`, `gui_normal.bft` `a88867207aacaa772a2f36d60ba576671cd21a7e965fb19ad6f7429818690e08`, Understone paketi `9a26a9adcb749bc3e241565d321a2cd2a3d1f800729aa112d38f816eaea07e53`, Traitor's Keep paketi `86d2cd99627432cf983d0bca6dc251cca3f525b1045773dfd1e9ee42e784e996` (hepsi v1.1.0 ile birebir). `exe`/`zip` dosyalarının kendi hash'leri her derlemede farklıdır (Nuitka/Inno zaman damgaları); sürümü yayımladığınız dosya, **VirusTotal'a yüklediğiniz ve Release'e eklediğiniz dosya**dır.
+**v1.1.1 için doğrulanmış sonuç** (depo klonundan, yalnızca orijinal oyun dosyaları ve bu araçlarla): `book.babel` `c9d37ad104f6c668037af4eb75238a8d54395a57c15e6de68c883b518fa30f0c`, `gui_normal.bft` `a88867207aacaa772a2f36d60ba576671cd21a7e965fb19ad6f7429818690e08`, Understone paketi `a468b064f48f0622c917170f0012859dab4d01e899b65133e1fc2b0d256447c3`, Traitor's Keep paketi `3f0cc0dc42f63c577e893c8f445b5be037916d106c5475aa994bfc28b735678b` ve yer tutucu paketleri (`manifest.json` `placeholders`, dosya dosya SHA-256) v1.1.1 ile birebir aynı; build bunları `manifest.json` ile karşılaştırır, uyuşmazlıkta durur. `exe`/`zip` dosyalarının kendi hash'leri her derlemede farklıdır (Nuitka/Inno zaman damgaları); sürümü yayımladığınız dosya, **VirusTotal'a yüklediğiniz ve Release'e eklediğiniz dosya**dır.
 
 Çıktılar `output\` altındadır: `Fable3_Turkce_Yama_<tag>.exe`, `.zip`, `SHA256SUMS.txt`, `scan_release.txt`.
 
@@ -126,6 +126,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools\installer\test_gui.ps1
 - `test_gui.ps1` bölüm D ("Yamayı kaldır") onay penceresine tuş gönderemez (bilinen düzenek sınırı); aynı akış `test_safe.ps1` T2'de sınanır.
 - Gerçek oyun klasörünün test boyunca değişmediğini de görmek için `$env:F3_GAME = '<oyun klasörü>'`.
 - Gerçek oyunda deneme: derlenen exe'yi oyun klasörüne kurun, oyunu `FableLauncher.exe` ile açıp değişen metinlere bakın. Deneme paketleri (`apply.bat`) kullandıysanız **mutlaka `restore.bat`** çalıştırın. Kaldırma sonrası oyun dosyaları orijinal hash'lere dönmelidir.
+- **Kayıt/yükseltme senaryoları için tek tıklamalı oyun içi test kitleri:** `tests\oyun_ici\TEST_YUKSELT.bat` (v1.1.0 → yeni sürüm yükseltme, kaldırma, eski kaydın açılması; kayıtlar yedeklenir/geri yüklenir) ve `TEST.bat`. Ayrıntı: [tests/oyun_ici/README.md](../tests/oyun_ici/README.md), arka plan: [GELISTIRICI.md §11](GELISTIRICI.md). Oyun klasörünü `F3_GAME` ile verin.
 
 ## 8. Yayın
 

@@ -311,7 +311,19 @@ def build_delta(version='v1.1.0'):
         banks = [{'bank': man_dlc[k]['bank'], 'desc': man_dlc[k]['desc'] + ' (yer tutucu)', 'uid': man_dlc[k]['uid'], 'order': man_dlc[k]['order'],
                   'book': None, 'required': False, 'xmb_required': 'False'} for k in keys]
         dlc_package.write_collection(os.path.join(DELTA_DIR, 'placeholder', variant, dlc_package.FOLDER), banks, version='yer tutucu')
-    print('yer tutucu paketleri: both/us/tk')
+    ph_got = {}
+    for variant in ('both', 'us', 'tk'):
+        r_ = os.path.join(DELTA_DIR, 'placeholder', variant, dlc_package.FOLDER)
+        ph_got[variant] = {}
+        for dd_, _, fs_ in os.walk(r_):
+            for f_ in fs_:
+                p_ = os.path.join(dd_, f_)
+                ph_got[variant][os.path.relpath(p_, r_).replace(os.sep, '/')] = sha(p_)
+        ph_got[variant] = dict(sorted(ph_got[variant].items()))
+    ph_exp = json.load(open(EXPECTED, encoding='utf-8')).get('placeholders')
+    if ph_exp is not None and ph_exp != ph_got:
+        sys.exit('Yer tutucu paketleri manifest.json ile uyuşmuyor (manifest.json "placeholders" değerlerini güncelleyin).')
+    print('yer tutucu paketleri: both/us/tk' + (' (manifest ile aynı)' if ph_exp is not None else ' (manifest.json içinde placeholders yok)'))
     # 5) bilinen hash'ler + beklenen sabitler (Standart ve eski çıktılar YALNIZCA "eski sürüm" tanıması içindir)
     open(os.path.join(ROOT, 'tools', 'installer', 'known_hashes.inc'), 'w', encoding='utf-8').write(known_hashes_inc(exp))
     iscc = None

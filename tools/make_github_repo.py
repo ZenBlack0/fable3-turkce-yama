@@ -74,6 +74,14 @@ def build():
             cp('tools/docs_src/' + n)
     for n in os.listdir(os.path.join(ROOT, 'tools', 'docs_src', 'ISSUE_TEMPLATE')):
         cp('tools/docs_src/ISSUE_TEMPLATE/' + n)
+    # oyun içi test kitleri (tests/oyun_ici): üretilen/indirilen/yerel dosyalar hariç
+    kit = os.path.join(ROOT, 'tests', 'oyun_ici')
+    for d_, ds_, fs_ in os.walk(kit):
+        ds_[:] = [x for x in ds_ if x not in ('paketler', '_cikarilan', '_indirilen', '__pycache__')]
+        for f_ in fs_:
+            if f_ == 'SONUC.txt':
+                continue
+            cp(os.path.relpath(os.path.join(d_, f_), ROOT).replace(os.sep, '/'))
     os.makedirs(os.path.join(DST, 'docs', 'ekran'), exist_ok=True)
     open(os.path.join(DST, 'docs', 'ekran', '.gitkeep'), 'w').close()
     # manifest: paket hash'leri dahil (derlenmiş sürüm)

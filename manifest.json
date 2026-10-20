@@ -61,5 +61,30 @@
       "desc": "Traitors Keep DLC Turkce metinleri"
     }
   },
-  "dlc_translated": true
+  "dlc_translated": true,
+  "placeholders": {
+    "both": {
+      "Content/package_collection_info.xmb": "23253ecf3a385ba0bdf6c6602d80b2facb08eca0abbb0f06121d71b3d6a1ae85",
+      "Content/tr_yama_tk.bnk": "68bc20a18ef0392a70071c60c72afef4bb7177bcd51154dda15dd949df997f7f",
+      "Content/tr_yama_tk.bnk.dat": "39c6fd6df04421e7b40e9ff28b11cbb922e577c75f8bb71860cf346a490f89af",
+      "Content/tr_yama_us.bnk": "bff570767879fc206f484425a238aa191a9c50d78ffab82672298b16e6cf5dc9",
+      "Content/tr_yama_us.bnk.dat": "f548192f44d34f1a312677be34b5102e594c938b679c234607ede9ca6af70637",
+      "content.xbx": "029816d30c4f693fe4d3d85a9328755d6e6f21bae33b1e6f2016d128b84eaf9a",
+      "tr_yama.txt": "44aa1d294b253e155cdba4599731da39a73dda522114caf36c0bce3ef94f5e1b"
+    },
+    "tk": {
+      "Content/package_collection_info.xmb": "0b51e0b614c4b9918edc31393eb00284b2a2054657d79eab99bbb78c608a93cb",
+      "Content/tr_yama_tk.bnk": "68bc20a18ef0392a70071c60c72afef4bb7177bcd51154dda15dd949df997f7f",
+      "Content/tr_yama_tk.bnk.dat": "39c6fd6df04421e7b40e9ff28b11cbb922e577c75f8bb71860cf346a490f89af",
+      "content.xbx": "029816d30c4f693fe4d3d85a9328755d6e6f21bae33b1e6f2016d128b84eaf9a",
+      "tr_yama.txt": "6247f358a7fde0648487042288100351accd6af5d07b0e2a1f14bf1c9b68479f"
+    },
+    "us": {
+      "Content/package_collection_info.xmb": "8577b523ff1f26e70cc7835680515c63cc8b6e98f4c9288098658db442a7b717",
+      "Content/tr_yama_us.bnk": "bff570767879fc206f484425a238aa191a9c50d78ffab82672298b16e6cf5dc9",
+      "Content/tr_yama_us.bnk.dat": "f548192f44d34f1a312677be34b5102e594c938b679c234607ede9ca6af70637",
+      "content.xbx": "029816d30c4f693fe4d3d85a9328755d6e6f21bae33b1e6f2016d128b84eaf9a",
+      "tr_yama.txt": "2267105914042cf92e7622a06d643cca62ab6179a11668a727ce45f1f78f2efd"
+    }
+  }
 }

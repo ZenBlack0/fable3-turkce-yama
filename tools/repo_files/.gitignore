@@ -21,3 +21,9 @@ tools/installer/xdelta3/xdelta3.exe
 tools/installer/xdelta3/*.zip
 __pycache__/
 *.pyc
+
+# oyun içi test kitleri: üretilen/indirilen/yerel dosyalar
+tests/oyun_ici/paketler/
+tests/oyun_ici/_cikarilan/
+tests/oyun_ici/_indirilen/
+tests/oyun_ici/SONUC.txt
