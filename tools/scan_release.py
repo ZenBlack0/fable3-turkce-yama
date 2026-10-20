@@ -32,7 +32,7 @@ ZIP_OK = {NAME + '.exe', 'OKUBENI.txt', 'SHA256SUMS.txt'}
 REPO_TEXT_EXT = {'.tpl', '.bat', '.py', '.md', '.txt', '.csv', '.jsonl', '.json', '.iss', '.inc', '.bat', '.yml', '.yaml', '.toml', '.cfg', '.gitignore', '', '.ps1'}
 REPO_BIG_OK = {'translations/tr_public.jsonl'}
 DELTA_OK_TOP = {'book_pack.lzma', 'font.xdelta', 'xdelta3.exe', 'xdelta3_COPYING.txt', 'pyinstaller_COPYING.txt',
-                'python_LICENSE.txt', 'nuitka_LICENSE.txt', 'NOTICE.txt', 'f3patch'}
+                'python_LICENSE.txt', 'nuitka_LICENSE.txt', 'NOTICE.txt', 'f3patch', 'placeholder'}
 MAX_BIN = 64 << 20
 
 res = {'err': [], 'warn': [], 'info': []}
@@ -198,6 +198,10 @@ def scan_pack_dir(d, srcs, bad):
         if os.path.getsize(p) > MAX_BIN:
             err(f'kurucu girdisi: beklenmeyen çok büyük dosya: {p}')
     check_hashes('kurucu girdisi', allf, bad)
+    # yer tutucu paketler: yalnızca bilinen dosya adları; arşivler küçük olmalı (kitap/metin İÇERMEZ)
+    for p in allf:
+        if os.sep + 'placeholder' + os.sep in p and p.lower().endswith('.dat') and os.path.getsize(p) > 5000:
+            err(f'kurucu girdisi: yer tutucu arşivi beklenenden büyük (kitap içeriyor olabilir): {p}')
     info(f'Kurucuya giren klasör: {len(allf)} dosya, {sum(os.path.getsize(p) for p in allf):,} bayt')
     pk = os.path.join(d, 'book_pack.lzma')
     fx = os.path.join(d, 'font.xdelta')

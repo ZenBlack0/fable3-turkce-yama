@@ -12,28 +12,28 @@ Kurulum programının yaptığı işler (kaynak kodu bu depoda: `tools/installer
 
 | Dosya | Tespit | Uyaran motorlar | Rapor |
 |---|---|---|---|
-| `Fable3_Turkce_Yama_v1.1.0.exe` | 3/71 | Microsoft (Trojan:Win32/Wacatac.B!ml), SecureAge (Malicious), Skyhigh SWG (BehavesLike.Win32.ObfuscatedPoly.rc) | [VirusTotal](https://www.virustotal.com/gui/file/300fcbb1eeabcdce1cb10165eee6e79bd6665f3e1f3db9b16e5384bfdfb7058f) |
-| `Fable3_Turkce_Yama_v1.1.0.zip` | 0/68 | — | [VirusTotal](https://www.virustotal.com/gui/file/7a6b2b19329d77236ba8c9677b391175ca65240b5f94d704c9539473fd8f16d9) |
+| `Fable3_Turkce_Yama_v1.1.1.exe` | 2/70 | SecureAge (Malicious), Skyhigh SWG (BehavesLike.Win32.ObfuscatedPoly.rc) | [VirusTotal](https://www.virustotal.com/gui/file/5718473e61ab4e9cd80ab5de5d5e26ca1de76844504de6923e32d15227242a59) |
+| `Fable3_Turkce_Yama_v1.1.1.zip` | 0/67 | — | [VirusTotal](https://www.virustotal.com/gui/file/b5f134c341a44f91ac378590c1f8ffbfaa1aa248ec9d2310d6969a0905438006) |
 
-Tarama tarihi: 2026-10-19.
+Tarama tarihi: 2026-10-20.
 
 Uyarı veren motorlar yukarıdaki tabloda adıyla listelenmiştir; tespit etiketlerinin ayrıntısı rapor bağlantılarındadır. Tespit sayısı 0 değilse bu, dosyanın zararlı olduğunu değil, imzasız ve paketlenmiş bir program için sezgisel bir şüphe işaretlendiğini gösterebilir; yine de karar sizindir — güvenmek istemezseniz kaynaktan derleyebilirsiniz.
 
 ## Microsoft Defender uyarısı hakkında
 
-Kurulum programında Microsoft Defender'ın `Trojan:Win32/Wacatac.B!ml` adlı bir tespiti görülebilir. Adın sonundaki **`!ml`**, bu tespitin dosyanın içeriğine bakılarak değil, **makine öğrenmesi (ML) tahminiyle** verildiğini gösterir. İmzasız, yeni ve paketlenmiş (Python çalışma zamanı içeren) programlarda bu tür tahminler sık görülür. Bu dosyada **yanlış alarm** olduğunu düşünüyoruz: aynı kurulum programının zip paketi VirusTotal'da **0/68** sonuç verdi ve yaptığı her şey kaynak kodunda açıkça görülebilir.
+**v1.1.0** kurulum programında Microsoft Defender `Trojan:Win32/Wacatac.B!ml` adlı bir tespit verebiliyordu. Adın sonundaki **`!ml`**, bu tespitin dosyanın içeriğine bakılarak değil, **makine öğrenmesi (ML) tahminiyle** verildiğini gösterir; imzasız, yeni ve paketlenmiş (Python çalışma zamanı içeren) programlarda sık görülür. Bu bir **yanlış alarmdı** ve Microsoft'a yanlış alarm (false positive) bildirimi yapılmıştı.
 
-Microsoft'a **yanlış alarm (false positive) bildirimi yapıldı; sonuç bekleniyor.** Sonuç geldiğinde bu sayfa güncellenecektir.
+**v1.1.1'de bu Defender tespiti yok** (VirusTotal'da Microsoft v1.1.1 için tespit vermiyor; sonuçlar yukarıdaki tabloda). v1.1.0 kullanıyorsanız v1.1.1'e yükseltmeniz önerilir.
 
 Defender dosyayı engeller ya da karantinaya alırsa:
 
 1. **Windows Güvenliği → Virüs ve tehdit koruması → Koruma geçmişi** bölümünü açın.
-2. Engellenen `Fable3_Turkce_Yama_v1.1.0.exe` kaydını bulun, **Eylemler → İzin ver** (gerekirse **Geri yükle**) seçin.
+2. Engellenen `Fable3_Turkce_Yama_v1.1.1.exe` kaydını bulun, **Eylemler → İzin ver** (gerekirse **Geri yükle**) seçin.
 3. Dosyayı yeniden çalıştırın.
 
 Önce dosyaya güvenmek istiyorsanız:
 
-- Aşağıdaki "Kendiniz doğrulama" bölümüyle SHA-256 değerini bu sayfadaki değerle karşılaştırın (`exe`: `300fcbb1eeabcdce1cb10165eee6e79bd6665f3e1f3db9b16e5384bfdfb7058f`).
+- Aşağıdaki "Kendiniz doğrulama" bölümüyle SHA-256 değerini bu sayfadaki değerle karşılaştırın (`exe`: `5718473e61ab4e9cd80ab5de5d5e26ca1de76844504de6923e32d15227242a59`).
 - Kaynak kodu bu depodadır (`tools/installer/fable3_tr.iss`, `tools/helper/f3patch.py`); okuyabilir ya da kendiniz derleyebilirsiniz.
 - Dilerseniz VirusTotal'a kendiniz yükleyip sonucu görebilirsiniz.
 

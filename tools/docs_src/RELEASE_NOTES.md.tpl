@@ -2,8 +2,15 @@
 
 ## {{TAG}}
 
-- **Bilinen sorun:** Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir ("You do not have the required downloadable content..." uyarısı). **"Download Now"a basmayın**; yamayı yeniden kurunca kayıtlar açılır. Düzeltme v1.1.1'de gelecek.
-- Kurulum programı artık zip içinde dağıtılır: `{{ZIP_NAME}}` (kurulum programı + `OKUBENI.txt` + `SHA256SUMS.txt`).
+- **Kayıt sorunu çözüldü:** v1.1.0 yama kaldırıldığında, yama kuruluyken alınan kayıtlar "You do not have the required downloadable content..." uyarısıyla açılmıyordu (DLC paketimiz kayda zorunlu paket olarak yazılıyordu). Artık paket "zorunlu değil" işaretli (kimlikler ve klasör adı aynı); v1.1.1 ile alınan kayıtlar yamaya bağlı olmaz.
+- **v1.1.0 kullanıcıları:** v1.1.1'e yükseltin (kurulum programını yeniden çalıştırın) **ve oyunu bir kez kaydedin**. Kaldırıcı, v1.1.0 ile alınmış kayıt bulursa (kayıt klasörünü salt okunur tarar, kayıtlara yazmaz) `DLC\99_tr_yama` klasörünü silmek yerine oyuna hiçbir şey eklemeyen boş bir yer tutucuya çevirir ve size söyler; yeniden kurunca tam pakete yükseltilir.
+- Çeviri düzeltmeleri: `%1%` içeren iki ana oyun satırında kapanış `%` korundu; 21 DLC satırında "oldukça/epey" kalıpları ve "Wheel of Misfortune" adı (Çarkıfelaket) düzeltildi.
+- Geliştirme: QA'ya `%N%` ve sayı denetimi, üretilen kitapların kayıt kayıt denetimi (`verify_output.py`), kaldırıcı/yükseltme testleri.
+
+## v1.1.0
+
+- **Bilinen sorun (v1.1.1'de çözüldü):** yama kuruluyken alınan kayıtlar, yama kaldırıldığında açılmayabiliyordu; v1.1.1'e yükseltin.
+- Kurulum programı artık zip içinde dağıtılır: `Fable3_Turkce_Yama_v1.1.0.zip` (kurulum programı + `OKUBENI.txt` + `SHA256SUMS.txt`).
 - `f3patch.exe` yardımcısı PyInstaller yerine **Nuitka `--standalone` + MSVC** ile derlenir (`--onefile` ve UPX yok); antivirüs yanlış alarm riskini azaltmak için. Sonuçlar: [docs/antivirus.md](antivirus.md).
 - Kuruluma kendi kendini sınama modu eklendi (`/SELFTEST`): gömülü paketleri, `xdelta3`'ü ve `f3patch`'i denetler; orijinal dosyalar verilirse beklenen SHA-256 değerlerini doğrular.
 - Kurulum programı zip'in içinden çalıştırılırsa "Lütfen zip dosyasını önce bir klasöre çıkarın" uyarısı verir.

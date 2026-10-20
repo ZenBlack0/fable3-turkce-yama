@@ -1,7 +1,7 @@
 {
   "name": "Fable III Türkçe Yama",
-  "version": "1.1.0",
-  "tag": "v1.1.0",
+  "version": "1.1.1",
+  "tag": "v1.1.1",
   "company": "ZenBlack0",
   "copyright_holder": "Kerim",
   "repo": "ZenBlack0/fable3-turkce-yama",
@@ -22,7 +22,7 @@
     "Başka bir Steam yama revizyonu"
   ],
   "outputs": {
-    "book": "3eba8894429ac5ffb35e750ae1edba59192e131724c005c128e5700bdcb66754",
+    "book": "c9d37ad104f6c668037af4eb75238a8d54395a57c15e6de68c883b518fa30f0c",
     "font": "a88867207aacaa772a2f36d60ba576671cd21a7e965fb19ad6f7429818690e08"
   },
   "build": {
@@ -31,21 +31,21 @@
   },
   "package": {
     "exe": {
-      "name": "Fable3_Turkce_Yama_v1.1.0.exe",
-      "sha256": "300fcbb1eeabcdce1cb10165eee6e79bd6665f3e1f3db9b16e5384bfdfb7058f",
-      "size": 9297751
+      "name": "Fable3_Turkce_Yama_v1.1.1.exe",
+      "sha256": "5718473e61ab4e9cd80ab5de5d5e26ca1de76844504de6923e32d15227242a59",
+      "size": 9299290
     },
     "zip": {
-      "name": "Fable3_Turkce_Yama_v1.1.0.zip",
-      "sha256": "7a6b2b19329d77236ba8c9677b391175ca65240b5f94d704c9539473fd8f16d9",
-      "size": 8739568
+      "name": "Fable3_Turkce_Yama_v1.1.1.zip",
+      "sha256": "b5f134c341a44f91ac378590c1f8ffbfaa1aa248ec9d2310d6969a0905438006",
+      "size": 8741332
     }
   },
   "dlc": {
     "understone": {
       "label": "Understone (Day One / DLC1) kitabı",
       "src_sha": "16000712a304bd6cb8ea4175800d5490369c0995eed70b9f3133b0538c04a55b",
-      "out_sha": "9a26a9adcb749bc3e241565d321a2cd2a3d1f800729aa112d38f816eaea07e53",
+      "out_sha": "a468b064f48f0622c917170f0012859dab4d01e899b65133e1fc2b0d256447c3",
       "bank": "tr_yama_us",
       "uid": 120,
       "order": 10000,
@@ -54,7 +54,7 @@
     "traitors": {
       "label": "Traitor's Keep (DLC2) kitabı",
       "src_sha": "529aaf16e1455ad55b3570c7d8cb2bc4e6301ddbf4eae81ca9ddd3769762ac11",
-      "out_sha": "86d2cd99627432cf983d0bca6dc251cca3f525b1045773dfd1e9ee42e784e996",
+      "out_sha": "3f0cc0dc42f63c577e893c8f445b5be037916d106c5475aa994bfc28b735678b",
       "bank": "tr_yama_tk",
       "uid": 121,
       "order": 10001,

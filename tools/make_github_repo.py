@@ -24,7 +24,7 @@ GIT_NAME = 'ZenBlack0'
 GIT_EMAIL = '163824246+ZenBlack0@users.noreply.github.com'
 TOOLS = ['babel.py', 'extract.py', 'repack.py', 'font_patch.py', 'build.py', 'build_all.py', 'validate_all.py', 'scan_release.py',
          'gen_docs.py', 'make_github_repo.py', 'qa.py', 'flags.py', 'trtext.py', 'init_translations.py', 'import_public.py',
-         'export_public.py', 'tr_tool.py', 'show.py', 'nuitka_helper.bat', 'init_dlc.py', 'dlc_bnk.py', 'dlc_build.py', 'dlc_package.py', 'verify_output.py']
+         'export_public.py', 'tr_tool.py', 'show.py', 'nuitka_helper.bat', 'init_dlc.py', 'dlc_bnk.py', 'dlc_build.py', 'dlc_package.py', 'verify_output.py', 'make_test_save.py']
 
 
 def cp(src_rel, dst_rel=None):
@@ -60,7 +60,7 @@ def build():
                 'glossary.csv', 'docs/FORMAT.md', 'docs/STYLE_VILLAGERS.md', 'docs/GELISTIRICI.md', 'docs/KURULUM_GELISTIRICI.md',
                 'tools/installer/test_safe.ps1', 'tools/installer/test_exe.ps1', 'tools/installer/test_detect.ps1',
                 'tools/installer/test_gui.ps1', 'tools/installer/test_selftest.ps1', 'tools/installer/shot_instpage.ps1',
-                'tools/installer/make_fake_dlc.py', '.gitignore'):
+                'tools/installer/make_fake_dlc.py', 'tools/installer/check_pkg.py', '.gitignore'):
         if rel == '.gitignore':
             cp('tools/repo_files/.gitignore', '.gitignore')
         else:

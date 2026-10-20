@@ -98,7 +98,8 @@ def cmd_dlc(a):
         if dlc_build.sha256(data) != v['out_sha']:
             rep.append(f'SKIP|{name}|uretilen DLC kitabinin SHA256 degeri beklenenle uyusmuyor')
             continue
-        banks.append({'bank': v['bank'], 'desc': v['desc'], 'uid': v['uid'], 'order': v['order'], 'book': data})
+        banks.append({'bank': v['bank'], 'desc': v['desc'], 'uid': v['uid'], 'order': v['order'], 'book': data,
+                      'required': False, 'xmb_required': 'False'})   # v1.1.1: kayıtlar pakete bağlanmaz (isRequired=False)
         rep.append(f'INFO|{name}: {key} DLC kitabi Turkcelestirildi ({applied} kayit)')
     if banks:
         pkg = os.path.join(a.out, dlc_package.FOLDER)

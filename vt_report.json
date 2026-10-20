@@ -1,21 +1,20 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "exe": {
-    "sha256": "300fcbb1eeabcdce1cb10165eee6e79bd6665f3e1f3db9b16e5384bfdfb7058f",
-    "url": "https://www.virustotal.com/gui/file/300fcbb1eeabcdce1cb10165eee6e79bd6665f3e1f3db9b16e5384bfdfb7058f",
-    "detections": 3,
-    "total": 71,
+    "sha256": "5718473e61ab4e9cd80ab5de5d5e26ca1de76844504de6923e32d15227242a59",
+    "url": "https://www.virustotal.com/gui/file/5718473e61ab4e9cd80ab5de5d5e26ca1de76844504de6923e32d15227242a59",
+    "detections": 2,
+    "total": 70,
     "engines": [
-      "Microsoft (Trojan:Win32/Wacatac.B!ml)",
       "SecureAge (Malicious)",
       "Skyhigh SWG (BehavesLike.Win32.ObfuscatedPoly.rc)"
     ]
   },
   "zip": {
-    "sha256": "7a6b2b19329d77236ba8c9677b391175ca65240b5f94d704c9539473fd8f16d9",
-    "url": "https://www.virustotal.com/gui/file/7a6b2b19329d77236ba8c9677b391175ca65240b5f94d704c9539473fd8f16d9",
+    "sha256": "b5f134c341a44f91ac378590c1f8ffbfaa1aa248ec9d2310d6969a0905438006",
+    "url": "https://www.virustotal.com/gui/file/b5f134c341a44f91ac378590c1f8ffbfaa1aa248ec9d2310d6969a0905438006",
     "detections": 0,
-    "total": 68,
+    "total": 67,
     "engines": []
   }
 }

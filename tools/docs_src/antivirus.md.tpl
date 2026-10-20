@@ -16,9 +16,9 @@ Kurulum programının yaptığı işler (kaynak kodu bu depoda: `tools/installer
 
 ## Microsoft Defender uyarısı hakkında
 
-Kurulum programında Microsoft Defender'ın `Trojan:Win32/Wacatac.B!ml` adlı bir tespiti görülebilir. Adın sonundaki **`!ml`**, bu tespitin dosyanın içeriğine bakılarak değil, **makine öğrenmesi (ML) tahminiyle** verildiğini gösterir. İmzasız, yeni ve paketlenmiş (Python çalışma zamanı içeren) programlarda bu tür tahminler sık görülür. Bu dosyada **yanlış alarm** olduğunu düşünüyoruz: aynı kurulum programının zip paketi VirusTotal'da {{VT_ZIP_RESULT}} sonuç verdi ve yaptığı her şey kaynak kodunda açıkça görülebilir.
+**v1.1.0** kurulum programında Microsoft Defender `Trojan:Win32/Wacatac.B!ml` adlı bir tespit verebiliyordu. Adın sonundaki **`!ml`**, bu tespitin dosyanın içeriğine bakılarak değil, **makine öğrenmesi (ML) tahminiyle** verildiğini gösterir; imzasız, yeni ve paketlenmiş (Python çalışma zamanı içeren) programlarda sık görülür. Bu bir **yanlış alarmdı** ve Microsoft'a yanlış alarm (false positive) bildirimi yapılmıştı.
 
-Microsoft'a **yanlış alarm (false positive) bildirimi yapıldı; sonuç bekleniyor.** Sonuç geldiğinde bu sayfa güncellenecektir.
+**v1.1.1'de bu Defender tespiti yok** (VirusTotal'da Microsoft v1.1.1 için tespit vermiyor; sonuçlar yukarıdaki tabloda). v1.1.0 kullanıyorsanız v1.1.1'e yükseltmeniz önerilir.
 
 Defender dosyayı engeller ya da karantinaya alırsa:
 

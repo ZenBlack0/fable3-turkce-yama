@@ -2,16 +2,16 @@
 ; Derleme: build.py --exe  (ISCC /DVersion=1.0.0 /DSrcDir=... /DOutDir=... fable3_tr.iss)
 
 #ifndef Version
-  #define Version "1.1.0"
+  #define Version "1.1.1"
 #endif
 #ifndef SrcDir
   #define SrcDir "delta"
 #endif
 #ifndef OutDir
-  #define OutDir "..\..\dist\v1.1.0"
+  #define OutDir "..\..\dist\v1.1.1"
 #endif
 #ifndef OutName
-  #define OutName "Fable3_Turkce_Yama_v1.1.0"
+  #define OutName "Fable3_Turkce_Yama_v1.1.1"
 #endif
 
 [Setup]
@@ -64,6 +64,8 @@ Source: "{#SrcDir}\book_pack.lzma"; DestDir: "{tmp}"; Flags: dontcopy
 Source: "{#SrcDir}\f3patch\*"; DestDir: "{tmp}\f3patch"; Flags: dontcopy recursesubdirs createallsubdirs
 Source: "{#SrcDir}\font.xdelta"; DestDir: "{tmp}"; Flags: dontcopy
 Source: "{#SrcDir}\xdelta3.exe"; DestDir: "{tmp}"; Flags: dontcopy
+Source: "{#SrcDir}\placeholder\*"; DestDir: "{tmp}\placeholder"; Flags: dontcopy recursesubdirs createallsubdirs
+Source: "{#SrcDir}\placeholder\*"; DestDir: "{app}\placeholder"; Flags: recursesubdirs createallsubdirs
 Source: "{#SrcDir}\xdelta3_COPYING.txt"; DestDir: "{app}\lisans"
 Source: "{#SrcDir}\nuitka_LICENSE.txt"; DestDir: "{app}\lisans"
 Source: "{#SrcDir}\python_LICENSE.txt"; DestDir: "{app}\lisans"
@@ -124,6 +126,20 @@ begin
     ForceDirectories(AppDirNow);
     SaveStringToFile(LogPath(Dir), GetDateTimeString('yyyy/mm/dd hh:nn:ss', '-', ':') + '  ' + Msg + #13#10, True);
   end;
+  { Kaldırmada uygulama klasöründeki kurulum_log.txt kaldırıcı bitince silinir; kalıcı iz için aynı satır kullanıcının TEMP klasörüne de yazılır. }
+  if IsUninstaller then
+    SaveStringToFile(ExpandConstant('{%TEMP}') + '\Fable3_Turkce_Yama_kaldirma_log.txt', GetDateTimeString('yyyy/mm/dd hh:nn:ss', '-', ':') + '  ' + Msg + #13#10, True);
+end;
+
+{ Bilgi kutusunun TAM metnini günlüğe yazıp kutuyu gösterir (kutuda ne yazdığı sonradan okunabilsin). }
+procedure InfoBox(const Dir, Msg: String; Kind: TMsgBoxType);
+var
+  L: String;
+begin
+  L := Msg;
+  StringChangeEx(L, #13#10, ' | ', True);
+  WriteLog(Dir, 'BİLGİ KUTUSU: ' + L);
+  SuppressibleMsgBox(Msg, Kind, MB_OK, IDOK);
 end;
 
 function BookPath(const Dir: String): String;
@@ -560,6 +576,215 @@ begin
   Result := 1;
 end;
 
+{ ---------------------------------------------- kayıt taraması (YALNIZCA OKUR) ve yer tutucu paket
+  Neden: v1.1.0 paketi kayda "zorunlu paket" (RequiredPackage 120/121) olarak yazılıyordu. Böyle kayıtlar, DLC\99_tr_yama kaldırılınca
+  "required downloadable content" uyarısı verir. Kaldırırken kayıt klasörü okunur (HİÇBİR kayıt dosyasına yazılmaz); 120/121 gerektiren
+  kayıt varsa (ya da klasör okunamazsa: güvenli taraf) paket silinmez, oyuna hiçbir şey eklemeyen boş bir yer tutucuya çevrilir. }
+var
+  DlcWhy: String;
+
+function SavesRoot: String;
+begin
+  Result := GetEnv('F3_SAVESDIR');      { yalnızca testler için; normalde %USERPROFILE%\Saved Games\Lionhead Studios\Fable 3 }
+  if Result = '' then
+    Result := ExpandConstant('{%USERPROFILE}') + '\Saved Games\Lionhead Studios\Fable 3';
+  Result := RemoveBackslash(Result);
+end;
+
+{ chaptersave.bin: 4 bayt başlık + düz XML. RequiredPackage listesinde 120/121 var mı: 1 evet, 0 hayır, -1 okunamadı/biçim tanınmadı }
+function SaveRequiresTr(const FileName: String): Integer;
+var
+  S: AnsiString;
+  T, Id: String;
+  P, Q: Integer;
+begin
+  Result := -1;
+  if not LoadStringFromFile(FileName, S) then Exit;
+  T := S;
+  if Pos('<SaveInfo>', T) = 0 then Exit;
+  Result := 0;
+  P := Pos('<RequiredPackage>', T);
+  while P > 0 do
+  begin
+    Delete(T, 1, P + 16);
+    Q := Pos('<PackageId type="uint">', T);
+    if Q > 0 then
+    begin
+      Delete(T, 1, Q + 22);
+      Id := '';
+      while (Length(T) > 0) and (T[1] >= '0') and (T[1] <= '9') do
+      begin
+        Id := Id + T[1];
+        Delete(T, 1, 1);
+      end;
+      if (Id = '120') or (Id = '121') then Result := 1;
+    end;
+    P := Pos('<RequiredPackage>', T);
+  end;
+end;
+
+{ Dönen: True = 120/121 gerektiren kayıt var; Unreadable: okunamayan kayıt var }
+function ScanSaves(const Dir: String; Depth: Integer; var Unreadable: Boolean): Boolean;
+var
+  FR: TFindRec;
+  Full, L: String;
+  R: Integer;
+begin
+  Result := False;
+  if FindFirst(Dir + '\*', FR) then
+  try
+    repeat
+      if (FR.Name <> '.') and (FR.Name <> '..') then
+      begin
+        Full := Dir + '\' + FR.Name;
+        if (FR.Attributes and FILE_ATTRIBUTE_DIRECTORY) <> 0 then
+        begin
+          if Depth < 3 then
+            if ScanSaves(Full, Depth + 1, Unreadable) then Result := True;
+        end
+        else
+        begin
+          L := Lowercase(FR.Name);
+          if (Length(L) >= 15) and (Copy(L, Length(L) - 14, 15) = 'chaptersave.bin') then
+          begin
+            R := SaveRequiresTr(Full);
+            if R = 1 then Result := True
+            else if R < 0 then Unreadable := True;
+          end;
+        end;
+      end;
+    until not FindNext(FR);
+  finally
+    FindClose(FR);
+  end;
+end;
+
+{ True = yer tutucu bırakılmalı. Klasör yoksa/okunamazsa True (güvenli taraf). }
+function SavesNeedPlaceholder: Boolean;
+var
+  Root: String;
+  Unr: Boolean;
+begin
+  Result := True;
+  Root := SavesRoot;
+  if not DirExists(Root) then
+  begin
+    DlcWhy := 'kayıt klasörü bulunamadığı için (güvenli tarafta kalındı)';
+    Exit;
+  end;
+  Unr := False;
+  if ScanSaves(Root, 0, Unr) then
+  begin
+    DlcWhy := 'v1.1.0 ile alınmış ve yama paketini gerektiren kayıt(lar) bulunduğu için';
+    Exit;
+  end;
+  if Unr then
+  begin
+    DlcWhy := 'bazı kayıtlar okunamadığı için (güvenli tarafta kalındı)';
+    Exit;
+  end;
+  DlcWhy := 'hiçbir kayıt yama paketini gerektirmiyor';
+  Result := False;
+end;
+
+function PlaceholderRoot: String;
+begin
+  Result := ExpandConstant('{tmp}') + '\placeholder';
+  if DirExists(Result) then Exit;
+  Result := ExpandConstant('{app}') + '\placeholder';
+  if DirExists(Result) then Exit;
+  Result := '';
+end;
+
+{ DLC\99_tr_yama içindeki bilinen dosyaları yer tutucu dosyalarla değiştirir (aynı kimlikler 120/121; kitap/metin YOK). }
+function PlaceholderPack(const Game: String): Boolean;
+var
+  Pkg, V, Src, Root: String;
+  Us, Tk: Boolean;
+  I: Integer;
+  Names: array[0..6] of String;
+begin
+  Result := False;
+  Pkg := DlcPkgDir(Game);
+  Us := FileExists(Pkg + '\Content\tr_yama_us.bnk');
+  Tk := FileExists(Pkg + '\Content\tr_yama_tk.bnk');
+  if Us and (not Tk) then V := 'us'
+  else if Tk and (not Us) then V := 'tk'
+  else V := 'both';
+  Root := PlaceholderRoot;
+  if Root = '' then
+  begin
+    WriteLog(Game, 'Yer tutucu paket dosyaları bulunamadı.');
+    Exit;
+  end;
+  Src := Root + '\' + V + '\99_tr_yama';
+  if not FileExists(Src + '\content.xbx') then
+  begin
+    WriteLog(Game, 'Yer tutucu paket eksik: ' + Src);
+    Exit;
+  end;
+  Names[0] := 'content.xbx';
+  Names[1] := 'tr_yama.txt';
+  Names[2] := 'Content\package_collection_info.xmb';
+  Names[3] := 'Content\tr_yama_us.bnk';
+  Names[4] := 'Content\tr_yama_us.bnk.dat';
+  Names[5] := 'Content\tr_yama_tk.bnk';
+  Names[6] := 'Content\tr_yama_tk.bnk.dat';
+  ForceDirectories(Pkg + '\Content');
+  for I := 0 to 6 do
+  begin
+    if FileExists(Src + '\' + Names[I]) then
+    begin
+      if (not FileCopy(Src + '\' + Names[I], Pkg + '\' + Names[I], False)) or
+         (Hash(Pkg + '\' + Names[I]) <> Hash(Src + '\' + Names[I])) then
+      begin
+        WriteLog(Game, 'Yer tutucu dosyası yazılamadı: ' + Names[I]);
+        Exit;
+      end;
+    end
+    else if FileExists(Pkg + '\' + Names[I]) then
+      DeleteFile(Pkg + '\' + Names[I]);
+  end;
+  Result := True;
+end;
+
+{ DLC\99_tr_yama'yı kaldırırken: 0 klasör yoktu, 1 silindi, 2 bilinmeyen dosya var (dokunulmadı),
+  3 yer tutucuya çevrildi, 4 yer tutucu hazırlanamadı (paket olduğu gibi bırakıldı) }
+function RetireDlc(const Game: String): Integer;
+var
+  U: Integer;
+begin
+  Result := 0;
+  DlcWhy := '';
+  if (not IsGameDir(Game)) or IsRootLike(Game) then Exit;
+  U := CountDlcUnexpected(Game);
+  if U < 0 then Exit;
+  if U > 0 then
+  begin
+    WriteLog(Game, 'DLC\99_tr_yama içinde bilinmeyen ' + IntToStr(U) + ' öğe var; hiçbir şey silinmedi.');
+    Result := 2;
+    Exit;
+  end;
+  if SavesNeedPlaceholder then
+  begin
+    if PlaceholderPack(Game) then
+    begin
+      WriteLog(Game, 'DLC\99_tr_yama yer tutucuya çevrildi (' + DlcWhy + '). Kayıt dosyalarına dokunulmadı.');
+      Result := 3;
+    end
+    else
+    begin
+      WriteLog(Game, 'Yer tutucu hazırlanamadı; DLC\99_tr_yama olduğu gibi bırakıldı (güvenli taraf).');
+      Result := 4;
+    end;
+  end
+  else
+  begin
+    Result := RemoveDlcSafe(Game);
+    WriteLog(Game, 'DLC\99_tr_yama kaldırıldı (' + DlcWhy + ').');
+  end;
+end;
+
 { ---------------------------------------------- orijinal yedek bulma / geri yükleme }
 function OrigIn(const Path, Orig: String): Boolean;
 begin
@@ -599,8 +824,15 @@ begin
     Exit;
   end;
   Bak := Dir + '\_TR_yedek';
-  if RemoveDlcSafe(Dir) = 2 then
-    SuppressibleMsgBox('DLC\99_tr_yama klasöründe bu kurulumun oluşturmadığı dosyalar var; güvenlik için o klasörde hiçbir şey silinmedi. İsterseniz elle silebilirsiniz:' + #13#10 + DlcPkgDir(Dir), mbInformation, MB_OK, IDOK);
+  case RetireDlc(Dir) of
+    2: InfoBox(Dir, 'DLC\99_tr_yama klasöründe bu kurulumun oluşturmadığı dosyalar var; güvenlik için o klasörde hiçbir şey silinmedi. İsterseniz elle silebilirsiniz:' + #13#10 + DlcPkgDir(Dir), mbInformation);
+    3: InfoBox(Dir, 'DLC\99_tr_yama klasörü SİLİNMEDİ; içi metin içermeyen boş bir YER TUTUCUYA çevrildi (' + DlcWhy + ').' + #13#10#13#10 +
+         'Bu kayıtlar v1.1.0 ile alındığı için açılabilsin diye boş bir yer tutucu bırakıldı; oyuna hiçbir şey eklemez. ' +
+         'Yamayı yeniden kurup oyunu bir kez kaydederseniz bu kayıtlar yamadan bağımsız olur.' + #13#10#13#10 +
+         'Kayıt dosyalarınıza dokunulmadı (yalnızca okundu).', mbInformation);
+    4: InfoBox(Dir, 'DLC\99_tr_yama için yer tutucu hazırlanamadı; kayıtlarınız açılabilsin diye paket olduğu gibi bırakıldı (' + DlcWhy + ').' + #13#10 +
+         'Paket oyuna Türkçe DLC metni eklemeye devam eder. Yeniden denemek için kurulum programını çalıştırıp "Yamayı kaldır"ı seçin.', mbInformation);
+  end;
   SB := FindOrig(Dir, 'book.babel', ORIG_BOOK);
   SF := FindOrig(Dir, 'gui_normal.bft', ORIG_FONT);
   if (SB = '') or (SF = '') then
@@ -878,7 +1110,7 @@ function RunSelfTest(const LogF, OrigDir: String): Boolean;
 var
   Tmp, Cmd, H: String;
   RC, I: Integer;
-  Names: array[0..3] of String;
+  Names: array[0..6] of String;
 begin
   Result := True;
   DeleteFile(LogF);
@@ -896,7 +1128,10 @@ begin
   Names[1] := 'font.xdelta';
   Names[2] := 'xdelta3.exe';
   Names[3] := 'f3patch\f3patch.exe';
-  for I := 0 to 3 do
+  Names[4] := 'placeholder\both\99_tr_yama\content.xbx';
+  Names[5] := 'placeholder\us\99_tr_yama\Content\tr_yama_us.bnk';
+  Names[6] := 'placeholder\tk\99_tr_yama\Content\tr_yama_tk.bnk.dat';
+  for I := 0 to 6 do
     if FileExists(Tmp + '\' + Names[I]) then
       SelfLog(LogF, 'TAMAM  gömülü dosya: ' + Names[I])
     else
@@ -1194,7 +1429,7 @@ begin
       begin
         WriteLog(InstDir, 'KALDIRMA (kurulum programından): kaldırma kaydı yok, doğrudan geri yükleme.');
         if DoRestore(InstDir) then
-          SuppressibleMsgBox('Türkçe yama kaldırıldı; orijinal dosyalar geri yüklendi ve doğrulandı.', mbInformation, MB_OK, IDOK);
+          InfoBox(InstDir, 'Türkçe yama kaldırıldı; orijinal dosyalar geri yüklendi ve doğrulandı.', mbInformation);
       end;
       ExitNow := True;
       WizardForm.Close;
@@ -1462,12 +1697,14 @@ begin
   Cnt := 0;
   for I := 0 to GetArrayLength(DlcRep) - 1 do
     if Pos('OK|', DlcRep[I]) = 1 then Cnt := Cnt + 1;
-  RemoveDlcSafe(Dir);
   if Cnt = 0 then
   begin
     WriteLog(Dir, 'DLC: eklenecek paket yok (desteklenen DLC kurulu değil).');
+    RetireDlc(Dir);
     Exit;
   end;
+  { v1.1.0 paketi ya da yer tutucu varsa bilinen dosyaları silinip yenisi yazılır (aynı kimlikler 120/121) }
+  RemoveDlcSafe(Dir);
   ForceDirectories(Pkg + '\Content');
   for I := 0 to GetArrayLength(DlcRep) - 1 do
   begin
@@ -1483,7 +1720,7 @@ begin
     Dst := Pkg + '\' + Rel;
     if (not FileCopy(Src, Dst, False)) or (Hash(Dst) <> H) then
     begin
-      RemoveDlcSafe(Dir);
+      RetireDlc(Dir);
       Fail(Dir, 'DLC paketi dosyası kopyalanamadı ya da doğrulanamadı: ' + Rel + '. DLC klasörümüz temizlendi (ana yama kuruldu).');
     end;
   end;
@@ -1600,5 +1837,5 @@ begin
     Exit;
   end;
   if DoRestore(Game) then
-    SuppressibleMsgBox('Türkçe yama kaldırıldı; orijinal dosyalar geri yüklendi ve doğrulandı.', mbInformation, MB_OK, IDOK);
+    InfoBox(Game, 'Türkçe yama kaldırıldı; orijinal dosyalar geri yüklendi ve doğrulandı.', mbInformation);
 end;

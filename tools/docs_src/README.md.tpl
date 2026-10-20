@@ -3,7 +3,7 @@
 **Fable III (PC, Steam)** için tam Türkçe yerelleştirme: menüler, görevler, eşya metinleri ve altyazılar. **Köylü ve muhafız konuşmaları dahil tüm konuşmalarda Türkçe altyazı** gösterilir. Understone ve Traitor's Keep DLC metinleri de (kuruluysa) Türkçeleşir. Konuşmalar (ses) İngilizce kalır.
 > Resmî olmayan bir fan çevirisidir; Microsoft veya Lionhead Studios ile bağlantılı değildir. Fable III, Microsoft Corporation'ın ticari markasıdır.
 
-> **⚠ Önemli (v1.1.0): kayıtlar ve yamayı kaldırma.** Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir (oyun "You do not have the required downloadable content necessary to load this save game" uyarısı verir). **"Download Now"a basmayın**; yamayı yeniden kurunca kayıtlarınız açılır. Kayıt dosyaları bozulmaz. Düzeltme v1.1.1'de gelecek.
+> **v1.1.0 kullanıcıları:** v1.1.0'daki "yama kaldırılınca kayıtlar açılmıyor" sorunu **v1.1.1'de çözüldü**: v1.1.1'e yükseltin (kurulum programını yeniden çalıştırmanız yeterli) **ve oyunu bir kez kaydedin**; kayıtlarınız artık yamaya bağlı olmaz. **"Download Now"a basmayın**; yamayı yeniden kurunca eski kayıtlar da açılır.
 
 > **Durum: {{TAG}}** — {{N_TR}} metin çevrildi; {{N_KEEP}} metin (özel adlar, krediler, yer tutucular) bilerek değiştirilmedi. Çeviri **yapay zekâ desteğiyle** hazırlanmış ve elden geçirilmiştir; hatalar olabilir, düzeltmelere açıktır.
 
@@ -37,7 +37,7 @@ Ayrıntılı adımlar zip içindeki `OKUBENI.txt` dosyasındadır.
 
 **Önceki sürümden yükseltme:** v1.0.x ya da v1.1.0 öncesi Standart modla kurduysanız yeni kurulum programı bunu "kurulu (eski sürüm)" olarak tanır; *Yeniden kur / onar* ile güncel sürüme geçersiniz. Orijinal yedeğinize dokunulmaz.
 
-**Kayıtlar ve kaldırma (v1.1.0):** Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir ("downloadable content" uyarısı). "Download Now"a basmayın; yamayı yeniden kurunca kayıtlar açılır. Düzeltme v1.1.1'de gelecek.
+**Kayıtlar ve kaldırma:** v1.1.1 ile alınan kayıtlar yamaya bağlı değildir; yamayı kaldırınca da açılır. v1.1.0 ile alınmış kayıtlar yama paketini gerektirir; bu yüzden v1.1.1 kaldırıcısı kayıt klasörünü (salt okunur) tarar, böyle kayıt bulursa `DLC\99_tr_yama` klasörünü silmek yerine oyuna hiçbir şey eklemeyen boş bir **yer tutucuya** çevirir ve bunu size söyler. Yamayı yeniden kurup oyunu bir kez kaydederseniz bu kayıtlar da yamadan bağımsız olur. Kayıt dosyalarınıza yazılmaz.
 
 **Steam notu:** Steam'de "Oyun dosyalarının bütünlüğünü doğrula" yamayı geri alabilir; kurulum programını yeniden çalıştırmanız yeterlidir.
 
@@ -89,7 +89,7 @@ Kurulum programı (Inno Setup) ve içindeki `f3patch.exe` yardımcısı **açık
 
 {{VT_SUMMARY_MD}}
 
-**Microsoft Defender** kurulum programında `Trojan:Win32/Wacatac.B!ml` gösterebilir. Sondaki `!ml`, tespitin makine öğrenmesi tahmini olduğunu belirtir; bu dosyada **yanlış alarm** olduğunu düşünüyoruz ve Microsoft'a yanlış alarm bildirimi yapıldı (sonuç bekleniyor). Defender dosyayı engellerse: *Windows Güvenliği → Virüs ve tehdit koruması → Koruma geçmişi →* engellenen kaydı seçip *Eylemler → İzin ver*. Kaynak kodun tamamı bu depodadır; indirdiğiniz dosyanın SHA-256 değerini yukarıdaki tabloyla karşılaştırarak doğrulayabilirsiniz.
+**Microsoft Defender:** v1.1.0'da görülen `Trojan:Win32/Wacatac.B!ml` tespiti (makine öğrenmesi tahmini, yanlış alarm; Microsoft'a bildirilmişti) **v1.1.1'de yok**. Yine de bir antivirüs dosyayı engellerse: *Windows Güvenliği → Virüs ve tehdit koruması → Koruma geçmişi →* engellenen kaydı seçip *Eylemler → İzin ver*. Kaynak kodun tamamı bu depodadır; indirdiğiniz dosyanın SHA-256 değerini yukarıdaki tabloyla karşılaştırarak doğrulayabilirsiniz.
 
 Ayrıntılar, tarama sonuçları ve kendiniz doğrulama/derleme yolları: **[docs/antivirus.md](docs/antivirus.md)**.
 

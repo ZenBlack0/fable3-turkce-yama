@@ -55,12 +55,14 @@ def _crlf(s):
     return s.replace('\r\n', '\n').replace('\n', '\r\n')
 
 
-def package_info(bank, desc, order, uid):
+def package_info(bank, desc, order, uid, required=True):
+    """required=True: v1.1.0 davranışı (bank içindeki package_info.xml'de isRequired=true; oyun bunu kayda 'zorunlu paket' yazar).
+    required=False: resmî isteğe bağlı paketler gibi 'False' (kayıt bu pakete bağlanmaz)."""
     return _crlf(
         '<?xml version="1.0" ?>\n<package>\n\t<bankName>\n\t\t' + bank + '.bnk\n\t</bankName>\n'
         '\t<premiumContentMask>\n\t\t0\n\t</premiumContentMask>\n'
         '\t<contentsDescription>\n\t\t' + desc + '\n\t</contentsDescription>\n'
-        '\t<isRequired>\n\t\ttrue\n\t</isRequired>\n\t<dependencies>\n\t\t\n\t</dependencies>\n'
+        '\t<isRequired>\n\t\t' + ('true' if required else 'False') + '\n\t</isRequired>\n\t<dependencies>\n\t\t\n\t</dependencies>\n'
         '\t<mountOrder>\n\t\t' + str(order) + '\n\t</mountOrder>\n'
         '\t<canIgnoreMountOrder>\n\t\ttrue\n\t</canIgnoreMountOrder>\n'
         '\t<name>\n\t\t' + bank + '\n\t</name>\n'
@@ -79,7 +81,7 @@ def collection_info(banks, title, desc):
             '\t<package>\n\t\t<bankName>\n\t\t\t' + b['bank'] + '.bnk\n\t\t</bankName>\n'
             '\t\t<premiumContentMask>\n\t\t\t0\n\t\t</premiumContentMask>\n'
             '\t\t<contentsDescription>\n\t\t\t' + b['desc'] + '\n\t\t</contentsDescription>\n'
-            '\t\t<isRequired>\n\t\t\tfalse\n\t\t</isRequired>\n\t\t<dependencies>\n\t\t\t\n\t\t</dependencies>\n'
+            '\t\t<isRequired>\n\t\t\t' + b.get('xmb_required', 'false') + '\n\t\t</isRequired>\n\t\t<dependencies>\n\t\t\t\n\t\t</dependencies>\n'
             '\t\t<mountOrder>\n\t\t\t' + str(b['order']) + '\n\t\t</mountOrder>\n'
             '\t\t<canIgnoreMountOrder>\n\t\t\tfalse\n\t\t</canIgnoreMountOrder>\n'
             '\t\t<name>\n\t\t\t' + b['bank'] + '\n\t\t</name>\n'
@@ -138,8 +140,11 @@ def write_collection(dest, banks, version='', title='Fable III Turkce Yama', des
             f.write(data)
         out.append((rel, hashlib.sha256(data).hexdigest()))
     for b in banks:
-        info = package_info(b['bank'], b['desc'], b['order'], b['uid'])
-        bnk, dat = build_archive([('package_info.xml', info), ('language\\en-uk\\text\\book.babel', b['book'])])
+        info = package_info(b['bank'], b['desc'], b['order'], b['uid'], b.get('required', True))
+        files = [('package_info.xml', info)]
+        if b.get('book') is not None:      # book=None: yer tutucu paket (yalnızca package_info.xml; oyuna hiçbir şey eklemez)
+            files.append(('language\\en-uk\\text\\book.babel', b['book']))
+        bnk, dat = build_archive(files)
         put('Content\\' + b['bank'] + '.bnk', bnk)
         put('Content\\' + b['bank'] + '.bnk.dat', dat)
     put('Content\\package_collection_info.xmb', collection_info(banks, title, desc))

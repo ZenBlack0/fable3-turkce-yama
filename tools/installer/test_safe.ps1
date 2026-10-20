@@ -75,6 +75,29 @@ Kill-All
 Say "`n=== T0 eski/hatalı kayıt temizliği (varsa)"
 Say "  önceki kayıt InstallLocation: $(KeyLoc)"
 
+# ---- kayıt klasörü taklidi (kaldırıcı F3_SAVESDIR ile okur; test gerçek kayıtlara ASLA dokunmaz/okumaz)
+$py = $null
+foreach ($c in "$env:LOCALAPPDATA\Python\pythoncore-3.14-64\python.exe", "$env:LOCALAPPDATA\Programs\Python\Python314\python.exe") { if (-not $py -and (Test-Path $c)) { $py = $c } }
+if (-not $py) { $g = Get-Command python -ErrorAction SilentlyContinue | Where-Object { $_.Source -notlike '*WindowsApps*' } | Select-Object -First 1; if ($g) { $py = $g.Source } }
+if (-not $py) { throw 'Python 3.14 bulunamadi (check_pkg.py icin gerekli)' }
+function New-Saves([string]$mode) {   # yok | gerektirmez | gerektirir | bozuk
+    $r = "$base\saves_fake"
+    if (Test-Path $r) { Remove-Item $r -Recurse -Force }
+    $env:F3_SAVESDIR = "$r\Fable 3"
+    if ($mode -eq 'yok') { return }
+    $d = "$r\Fable 3\1122334400000000"; New-Item -ItemType Directory -Force $d | Out-Null
+    function Pk($tag, $ids) { ($ids | ForEach-Object { "`t`t<$tag>`n`t`t`t<PackageId type=`"uint`">$_</PackageId>`n`t`t</$tag>`n" }) -join '' }
+    $req = if ($mode -eq 'gerektirir') { 98, 120, 121, 60, 61, 30 } else { 98, 60, 61, 30 }
+    $xml = "<?xml version=`"1.0`"?>`n<SaveInfo>`n`t<GameVersion>`n`t`t<CompiledVersion type=`"uint`">4</CompiledVersion>`n" +
+        (Pk 'InstalledPackage' @(98, 120, 121, 60, 61, 30)) + (Pk 'PremiumPackage' @(98, 120, 121)) + (Pk 'RequiredPackage' $req) + "`t</GameVersion>`n</SaveInfo>`n"
+    if ($mode -eq 'bozuk') { [IO.File]::WriteAllBytes("$d\hero1autosave_chaptersave.bin", [byte[]](1..60)) }
+    else { [IO.File]::WriteAllBytes("$d\hero1autosave_chaptersave.bin", ([byte[]](0x7a, 0x10, 0, 0) + [Text.Encoding]::UTF8.GetBytes($xml))) }
+    [IO.File]::WriteAllBytes("$d\hero1autosave_mainsave.bin", [byte[]](10..250))
+}
+function Saves-Hash { if (Test-Path $env:F3_SAVESDIR) { (Get-ChildItem $env:F3_SAVESDIR -Recurse -File | Sort-Object FullName | ForEach-Object { (Get-FileHash $_.FullName).Hash }) -join '' } else { '-' } }
+function Pkg-Info($g) { & $py "$PSScriptRoot\check_pkg.py" show "$g\DLC\99_tr_yama" 2>&1 }
+New-Saves 'gerektirmez'     # varsayılan: kayıtlar yamaya bağlı değil -> kaldırma DLC\99_tr_yama'yı tamamen siler (T1–T11 böyle çalışır)
+
 # ===== T1/T2: kurulum + 'Yamayı kaldır' menüsü (GUI)
 Say "`n=== T1 kurulum (Tam), oyun klasöründe yalnızca book/font/_TR_yedek değişmeli"
 $g = New-Game 'A' $true; $app = "$base\A\uygulama klasoru"
@@ -242,6 +265,77 @@ if ($Old102 -and (Test-Path $Old102)) {
     $bad = FDiff $s0 (Snap $g)
     Check ($bad.Count -eq 0) "sonunda oyun klasörü BAŞLANGIÇLA AYNI $($bad -join ' ; ')"
 } else { Say '  [ATLANDI] eski v1.0.2 exe yok' }
+
+# ===== T12: kayıt klasöründe 120/121'i ZORUNLU gören kayıt VAR -> kaldırma paketi silmez, boş yer tutucuya çevirir; kayıtlara dokunulmaz
+Say "`n=== T12 kayıtta 120/121 Required VAR: DLC\99_tr_yama yer tutucuya dönmeli"
+New-Saves 'gerektirir'
+$g = New-Game 'N' $false $true; $app = "$base\N\uygulama"; $s0 = Snap $g
+Check ((Inst $g $app) -eq 0) 'kurulum çıkış kodu 0'
+$pi = Pkg-Info $g
+Check (($pi -join ' ') -match 'xmb_isRequired=False,False') "kurulan paket xmb'de isRequired=False: $($pi -join ' | ')"
+Check ((($pi | Where-Object { $_ -match '^bank=' }) | Where-Object { $_ -match 'isRequired=False' -and $_ -match 'book=True' }).Count -eq 2) 'kurulan iki bankta isRequired=False ve kitap var (kimlikler 120/121)'
+Check ((($pi | Where-Object { $_ -match 'uid=120' }).Count -eq 1) -and (($pi | Where-Object { $_ -match 'uid=121' }).Count -eq 1)) 'paket kimlikleri 120 ve 121'
+$sv0 = Saves-Hash
+Check ((Unins-Registry) -eq 0) 'kaldırıcı çıkış kodu 0'
+$pi = Pkg-Info $g
+Check (Test-Path "$g\DLC\99_tr_yama\content.xbx") 'DLC\99_tr_yama SİLİNMEDİ (yer tutucu olarak duruyor)'
+Check ((($pi | Where-Object { $_ -match '^bank=' }) | Where-Object { $_ -match 'entries=1 book=False' -and $_ -match 'isRequired=False' }).Count -eq 2) "yer tutucu: iki bankta yalnızca package_info.xml, KİTAP YOK, isRequired=False: $($pi -join ' | ')"
+Check ((($pi | Where-Object { $_ -match 'uid=120' }).Count -eq 1) -and (($pi | Where-Object { $_ -match 'uid=121' }).Count -eq 1)) 'yer tutucu aynı kimlikleri (120/121) taşıyor'
+Check ((Saves-Hash) -eq $sv0) 'kayıt dosyalarına DOKUNULMADI (bayt bayt aynı)'
+Check ((Get-FileHash "$g$BK").Hash -eq (Get-FileHash "$orig\book.babel.orig").Hash) 'book.babel orijinale döndü'
+$bad = FDiff $s0 (Snap $g) @() @('\DLC\99_tr_yama')
+Check ($bad.Count -eq 0) "oyun klasörü, yer tutucu dışında BAŞLANGIÇLA AYNI (DLC arşivleri ve diğer DLC'ler aynı) $($bad -join ' ; ')"
+
+# ===== T15: yer tutucudan yükseltme -> tam pakete dönüşür (aynı kimlikler); sonra kayıt yokken tamamen silinir
+Say "`n=== T15 yer tutucudan yükseltme: tam pakete dönmeli"
+Check ((Inst $g $app) -eq 0) 'yer tutucu varken kurulum (yükseltme) çıkış kodu 0'
+$pi = Pkg-Info $g
+Check ((($pi | Where-Object { $_ -match '^bank=' }) | Where-Object { $_ -match 'book=True' -and $_ -match 'isRequired=False' }).Count -eq 2) "tam paket geri geldi (kitap var, isRequired=False): $($pi -join ' | ')"
+New-Saves 'gerektirmez'
+Check ((Unins-Registry) -eq 0) 'kaldırıcı çıkış kodu 0'
+Check (-not (Test-Path "$g\DLC\99_tr_yama")) 'kayıtlar yamaya bağlı değil: DLC\99_tr_yama TAMAMEN silindi'
+$bad = FDiff $s0 (Snap $g)
+Check ($bad.Count -eq 0) "sonunda oyun klasörü BAŞLANGIÇLA AYNI $($bad -join ' ; ')"
+
+# ===== T13: kayıtta 120/121 Required YOK -> klasör tamamen silinir
+Say "`n=== T13 kayıtta 120/121 Required YOK: DLC\99_tr_yama tamamen silinmeli"
+New-Saves 'gerektirmez'
+$g = New-Game 'O' $false $true; $app = "$base\O\uygulama"; $s0 = Snap $g
+Inst $g $app | Out-Null
+$sv0 = Saves-Hash
+Check ((Unins-Registry) -eq 0) 'kaldırıcı çıkış kodu 0'
+Check (-not (Test-Path "$g\DLC\99_tr_yama")) 'DLC\99_tr_yama tamamen silindi'
+Check ((Saves-Hash) -eq $sv0) 'kayıt dosyalarına dokunulmadı'
+$bad = FDiff $s0 (Snap $g)
+Check ($bad.Count -eq 0) "oyun klasörü BAŞLANGIÇLA AYNI $($bad -join ' ; ')"
+
+# ===== T14: kayıt klasörü YOK / okunamıyor -> güvenli taraf: yer tutucu bırakılır
+foreach ($mode in 'yok', 'bozuk') {
+    Say "`n=== T14 kayıt klasörü '$mode': güvenli taraf (yer tutucu)"
+    New-Saves $mode
+    $g = New-Game ('P' + $mode) $false $true; $app = "$base\P$mode\uygulama"; $s0 = Snap $g
+    Inst $g $app | Out-Null
+    $sv0 = Saves-Hash
+    Check ((Unins-Registry) -eq 0) 'kaldırıcı çıkış kodu 0'
+    $pi = Pkg-Info $g
+    Check ((Test-Path "$g\DLC\99_tr_yama\content.xbx") -and ((($pi | Where-Object { $_ -match '^bank=' }) | Where-Object { $_ -match 'book=False' }).Count -eq 2)) "yer tutucu bırakıldı: $($pi -join ' | ')"
+    Check ((Saves-Hash) -eq $sv0) 'kayıt dosyalarına dokunulmadı'
+}
+
+# ===== T16: v1.1.0'dan yükseltme: eski (ZORUNLU) paketin üzerine kurulum -> isRequired=False yeni paket
+Say "`n=== T16 v1.1.0 paketi (zorunlu) varken yükseltme"
+New-Saves 'gerektirmez'
+$g = New-Game 'R' $false $true; $app = "$base\R\uygulama"
+& $py "$PSScriptRoot\check_pkg.py" make110 "$g\DLC\99_tr_yama" | Out-Null
+$pi = Pkg-Info $g
+Check ((($pi | Where-Object { $_ -match '^bank=' }) | Where-Object { $_ -match 'isRequired=true' }).Count -eq 2) "başlangıç: v1.1.0 biçimli paket (bank içi isRequired=true): $($pi -join ' | ')"
+Check ((Inst $g $app) -eq 0) 'yeni sürümle kurulum çıkış kodu 0'
+$pi = Pkg-Info $g
+Check (($pi -join ' ') -match 'xmb_isRequired=False,False') 'xmb isRequired=False'
+Check ((($pi | Where-Object { $_ -match '^bank=' }) | Where-Object { $_ -match 'isRequired=False' -and $_ -match 'book=True' -and $_ -match 'entries=2' }).Count -eq 2) "eski paket yenisiyle değişti (bank içi isRequired=False, kitap var): $($pi -join ' | ')"
+Check ((Test-Path "$g\DLC\99_tr_yama\benim.txt") -eq $false) 'klasörde beklenmeyen dosya kalmadı'
+Unins-Registry | Out-Null
+Check (-not (Test-Path "$g\DLC\99_tr_yama")) 'kayıtlar bağlı değil: kaldırınca paket tamamen silindi'
 
 Check ((RealState) -eq $real0) "gerçek kurulum test boyunca değişmedi ($real0)"
 Say "`n=== SONUÇ: $(if ($script:fail -eq 0) { 'TÜM TESTLER GEÇTİ' } else { "$($script:fail) HATA" })"

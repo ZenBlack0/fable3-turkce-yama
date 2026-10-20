@@ -37,6 +37,7 @@ LEGACY_BOOKS = {
     '5dd31cf1c282daa72e4103eb3696304e25d805d632afd89ffce1bf879e77b9ae': 'v1.0-v1.0.2 Tam altyazı',
     '9a74253db94b115dc8b4dd093ec5ab88a8bf209b7dbdc8f018e2608fe2ff09d4': 'v0.9',
     'c60a703e3acd9061349751ce9eb154e07d9f4ac0bc983afcf64183a44668b5bb': 'v1.1.0 ara derleme',
+    '3eba8894429ac5ffb35e750ae1edba59192e131724c005c128e5700bdcb66754': 'v1.1.0',
 }
 LEGACY_FONTS = {
     '0ba43fe00cb36458a2267e3cf1136895c070695364c7850bc1e600c319b6e5c1': 'v1.0-v1.0.2',
@@ -302,6 +303,15 @@ def build_delta(version='v1.1.0'):
     shutil.copyfile(nl_.locate(), os.path.join(DELTA_DIR, 'nuitka_LICENSE.txt'))
     shutil.copyfile(os.path.join(sys.base_prefix, 'LICENSE.txt'), os.path.join(DELTA_DIR, 'python_LICENSE.txt'))
     write(os.path.join(DELTA_DIR, 'NOTICE.txt'), NOTICE, 'utf-8', bom=True)
+    # 4b) yer tutucu DLC paketleri (kaldırıcı, v1.1.0 kayıtları açılabilsin diye gerektiğinde bunlardan birini bırakır;
+    #     aynı kimlikler 120/121, yalnızca package_info.xml, isRequired=False, METİN YOK)
+    import dlc_package
+    man_dlc = json.load(open(EXPECTED, encoding='utf-8'))['dlc']
+    for variant, keys in (('both', list(man_dlc)), ('us', ['understone']), ('tk', ['traitors'])):
+        banks = [{'bank': man_dlc[k]['bank'], 'desc': man_dlc[k]['desc'] + ' (yer tutucu)', 'uid': man_dlc[k]['uid'], 'order': man_dlc[k]['order'],
+                  'book': None, 'required': False, 'xmb_required': 'False'} for k in keys]
+        dlc_package.write_collection(os.path.join(DELTA_DIR, 'placeholder', variant, dlc_package.FOLDER), banks, version='yer tutucu')
+    print('yer tutucu paketleri: both/us/tk')
     # 5) bilinen hash'ler + beklenen sabitler (Standart ve eski çıktılar YALNIZCA "eski sürüm" tanıması içindir)
     open(os.path.join(ROOT, 'tools', 'installer', 'known_hashes.inc'), 'w', encoding='utf-8').write(known_hashes_inc(exp))
     iscc = None

@@ -9,9 +9,11 @@ Resmî olmayan bir fan çevirisidir; Microsoft veya Lionhead Studios ile bağlan
    Kurulum programı imzasızdır (kod imzalama sertifikası ücretlidir); kaynak kodu açıktır.
 3. Oyunu ve başlatıcıyı (FableLauncher.exe) kapatın.
 
-BİLİNEN SORUN (v1.1.0)
-Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir ("downloadable content" uyarısı).
-"Download Now"a basmayın; yamayı yeniden kurunca kayıtlarınız açılır. Düzeltme v1.1.1'de gelecek.
+v1.1.0 KULLANICILARI
+v1.1.1'e yükseltin (bu kurulum programını çalıştırın) ve oyunu BİR KEZ KAYDEDİN; kayıtlarınız artık yamaya bağlı olmaz.
+Yamayı kaldırınca kaydın açılmaması ("downloadable content" uyarısı) sorunu çözüldü: "Download Now"a basmayın, yamayı
+yeniden kurunca kayıtlar açılır. Kaldırıcı, v1.1.0 kayıtlarınız varsa DLC\99_tr_yama'yı silmez, boş bir yer tutucuya çevirir
+(oyuna hiçbir şey eklemez) ve size bildirir. Kayıt dosyalarınıza yazılmaz.
 
 NEDİR?
 Fable III (PC) için Türkçe altyazı ve arayüz çevirisi. Konuşmalar (ses) İngilizce kalır; altyazılar, menüler,

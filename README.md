@@ -3,9 +3,9 @@
 **Fable III (PC, Steam)** için tam Türkçe yerelleştirme: menüler, görevler, eşya metinleri ve altyazılar. **Köylü ve muhafız konuşmaları dahil tüm konuşmalarda Türkçe altyazı** gösterilir. Understone ve Traitor's Keep DLC metinleri de (kuruluysa) Türkçeleşir. Konuşmalar (ses) İngilizce kalır.
 > Resmî olmayan bir fan çevirisidir; Microsoft veya Lionhead Studios ile bağlantılı değildir. Fable III, Microsoft Corporation'ın ticari markasıdır.
 
-> **⚠ Önemli (v1.1.0): kayıtlar ve yamayı kaldırma.** Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir (oyun "You do not have the required downloadable content necessary to load this save game" uyarısı verir). **"Download Now"a basmayın**; yamayı yeniden kurunca kayıtlarınız açılır. Kayıt dosyaları bozulmaz. Düzeltme v1.1.1'de gelecek.
+> **v1.1.0 kullanıcıları:** v1.1.0'daki "yama kaldırılınca kayıtlar açılmıyor" sorunu **v1.1.1'de çözüldü**: v1.1.1'e yükseltin (kurulum programını yeniden çalıştırmanız yeterli) **ve oyunu bir kez kaydedin**; kayıtlarınız artık yamaya bağlı olmaz. **"Download Now"a basmayın**; yamayı yeniden kurunca eski kayıtlar da açılır.
 
-> **Durum: v1.1.0** — 49.273 metin çevrildi; 8.529 metin (özel adlar, krediler, yer tutucular) bilerek değiştirilmedi. Çeviri **yapay zekâ desteğiyle** hazırlanmış ve elden geçirilmiştir; hatalar olabilir, düzeltmelere açıktır.
+> **Durum: v1.1.1** — 49.273 metin çevrildi; 8.529 metin (özel adlar, krediler, yer tutucular) bilerek değiştirilmedi. Çeviri **yapay zekâ desteğiyle** hazırlanmış ve elden geçirilmiştir; hatalar olabilir, düzeltmelere açıktır.
 
 > **Resmî olmayan bir fan çevirisidir.** Fable III, Microsoft Corporation'ın ticari markasıdır; bu proje Microsoft veya Lionhead Studios ile bağlantılı değildir.
 >
@@ -23,9 +23,9 @@
 
 ## İndirme ve kurulum
 
-1. **[Releases](https://github.com/ZenBlack0/fable3-turkce-yama/releases/latest)** sayfasından `Fable3_Turkce_Yama_v1.1.0.zip` dosyasını indirin.
+1. **[Releases](https://github.com/ZenBlack0/fable3-turkce-yama/releases/latest)** sayfasından `Fable3_Turkce_Yama_v1.1.1.zip` dosyasını indirin.
 2. **Zip'i önce bir klasöre çıkarın.** Zip'in içinden kurulum programına çift tıklarsanız program çalışmayı reddeder.
-3. `Fable3_Turkce_Yama_v1.1.0.exe` dosyasını çalıştırın. Windows SmartScreen uyarı çıkarırsa: **Ek bilgi → Yine de çalıştır** (kurulum programı imzasız, açık kaynaklı bir programdır; aşağıdaki [Antivirüs](#antivirüs-uyarıları) bölümüne bakın).
+3. `Fable3_Turkce_Yama_v1.1.1.exe` dosyasını çalıştırın. Windows SmartScreen uyarı çıkarırsa: **Ek bilgi → Yine de çalıştır** (kurulum programı imzasız, açık kaynaklı bir programdır; aşağıdaki [Antivirüs](#antivirüs-uyarıları) bölümüne bakın).
 4. Oyun klasörü otomatik bulunur; bulunamazsa kendiniz seçersiniz. Kur'a basın; başka seçenek yoktur.
 5. Oyunda Seçenekler'den **Altyazılar** ayarını açın ve oyunu **FableLauncher.exe** ile başlatın (`Fable3.exe` tek başına "Wrong executable" hatası verir).
 
@@ -37,7 +37,7 @@ Ayrıntılı adımlar zip içindeki `OKUBENI.txt` dosyasındadır.
 
 **Önceki sürümden yükseltme:** v1.0.x ya da v1.1.0 öncesi Standart modla kurduysanız yeni kurulum programı bunu "kurulu (eski sürüm)" olarak tanır; *Yeniden kur / onar* ile güncel sürüme geçersiniz. Orijinal yedeğinize dokunulmaz.
 
-**Kayıtlar ve kaldırma (v1.1.0):** Yama kuruluyken aldığınız kayıtlar, yama kaldırıldığında açılmayabilir ("downloadable content" uyarısı). "Download Now"a basmayın; yamayı yeniden kurunca kayıtlar açılır. Düzeltme v1.1.1'de gelecek.
+**Kayıtlar ve kaldırma:** v1.1.1 ile alınan kayıtlar yamaya bağlı değildir; yamayı kaldırınca da açılır. v1.1.0 ile alınmış kayıtlar yama paketini gerektirir; bu yüzden v1.1.1 kaldırıcısı kayıt klasörünü (salt okunur) tarar, böyle kayıt bulursa `DLC\99_tr_yama` klasörünü silmek yerine oyuna hiçbir şey eklemeyen boş bir **yer tutucuya** çevirir ve bunu size söyler. Yamayı yeniden kurup oyunu bir kez kaydederseniz bu kayıtlar da yamadan bağımsız olur. Kayıt dosyalarınıza yazılmaz.
 
 **Steam notu:** Steam'de "Oyun dosyalarının bütünlüğünü doğrula" yamayı geri alabilir; kurulum programını yeniden çalıştırmanız yeterlidir.
 
@@ -62,8 +62,8 @@ DLC kitaplarının SHA-256 değerleri doğrulanır; farklı bir DLC sürümünde
 
 | DLC | Kitap SHA-256 (orijinal) | Beklenen sonuç SHA-256 |
 |---|---|---|
-| Understone (Day One / DLC1) kitabı | `16000712a304bd6cb8ea4175800d5490369c0995eed70b9f3133b0538c04a55b` | `9a26a9adcb749bc3e241565d321a2cd2a3d1f800729aa112d38f816eaea07e53` |
-| Traitor's Keep (DLC2) kitabı | `529aaf16e1455ad55b3570c7d8cb2bc4e6301ddbf4eae81ca9ddd3769762ac11` | `86d2cd99627432cf983d0bca6dc251cca3f525b1045773dfd1e9ee42e784e996` |
+| Understone (Day One / DLC1) kitabı | `16000712a304bd6cb8ea4175800d5490369c0995eed70b9f3133b0538c04a55b` | `a468b064f48f0622c917170f0012859dab4d01e899b65133e1fc2b0d256447c3` |
+| Traitor's Keep (DLC2) kitabı | `529aaf16e1455ad55b3570c7d8cb2bc4e6301ddbf4eae81ca9ddd3769762ac11` | `3f0cc0dc42f63c577e893c8f445b5be037916d106c5475aa994bfc28b735678b` |
 
 Çok oyunculu (co-op) oyunda eklenen paket, DLC listesinde "farklı DLC" olarak görünebilir; sorun yaşarsanız yamayı kaldırın ve bize bildirin.
 
@@ -77,14 +77,14 @@ DLC kitaplarının SHA-256 değerleri doğrulanır; farklı bir DLC sürümünde
 
 | Dosya | SHA-256 |
 |---|---|
-| `Fable3_Turkce_Yama_v1.1.0.zip` (8.739.568 bayt) | `7a6b2b19329d77236ba8c9677b391175ca65240b5f94d704c9539473fd8f16d9` |
-| `Fable3_Turkce_Yama_v1.1.0.exe` (9.297.751 bayt) | `300fcbb1eeabcdce1cb10165eee6e79bd6665f3e1f3db9b16e5384bfdfb7058f` |
+| `Fable3_Turkce_Yama_v1.1.1.zip` (8.741.332 bayt) | `b5f134c341a44f91ac378590c1f8ffbfaa1aa248ec9d2310d6969a0905438006` |
+| `Fable3_Turkce_Yama_v1.1.1.exe` (9.299.290 bayt) | `5718473e61ab4e9cd80ab5de5d5e26ca1de76844504de6923e32d15227242a59` |
 
 Kurulumdan sonra oyun klasöründe beklenen değerler:
 
 | Dosya | SHA-256 |
 |---|---|
-| `book.babel` | `3eba8894429ac5ffb35e750ae1edba59192e131724c005c128e5700bdcb66754` |
+| `book.babel` | `c9d37ad104f6c668037af4eb75238a8d54395a57c15e6de68c883b518fa30f0c` |
 | `gui_normal.bft` (yamalı yazı tipi) | `a88867207aacaa772a2f36d60ba576671cd21a7e965fb19ad6f7429818690e08` |
 
 PowerShell: `Get-FileHash -Algorithm SHA256 DOSYA`. Bu tablo `manifest.json` dosyasından betikle üretilir; sürüm sayfasındaki `SHA256SUMS.txt` ile aynı değerleri içerir.
@@ -93,9 +93,9 @@ PowerShell: `Get-FileHash -Algorithm SHA256 DOSYA`. Bu tablo `manifest.json` dos
 
 Kurulum programı (Inno Setup) ve içindeki `f3patch.exe` yardımcısı **açık kaynaklıdır** (`tools/installer/fable3_tr.iss`, `tools/helper/f3patch.py`). Yardımcı, Python ile yazılmış ve [Nuitka](https://nuitka.net) `--standalone` (klasör çıktısı, UPX yok) ile MSVC kullanılarak derlenmiştir. İmzasız olduğundan bazı antivirüs motorları yanlış alarm verebilir.
 
-VirusTotal sonuçları (2026-10-19): `Fable3_Turkce_Yama_v1.1.0.exe`: **3/71** ([rapor](https://www.virustotal.com/gui/file/300fcbb1eeabcdce1cb10165eee6e79bd6665f3e1f3db9b16e5384bfdfb7058f)); `Fable3_Turkce_Yama_v1.1.0.zip`: **0/68** ([rapor](https://www.virustotal.com/gui/file/7a6b2b19329d77236ba8c9677b391175ca65240b5f94d704c9539473fd8f16d9)).
+VirusTotal sonuçları (2026-10-20): `Fable3_Turkce_Yama_v1.1.1.exe`: **2/70** ([rapor](https://www.virustotal.com/gui/file/5718473e61ab4e9cd80ab5de5d5e26ca1de76844504de6923e32d15227242a59)); `Fable3_Turkce_Yama_v1.1.1.zip`: **0/67** ([rapor](https://www.virustotal.com/gui/file/b5f134c341a44f91ac378590c1f8ffbfaa1aa248ec9d2310d6969a0905438006)).
 
-**Microsoft Defender** kurulum programında `Trojan:Win32/Wacatac.B!ml` gösterebilir. Sondaki `!ml`, tespitin makine öğrenmesi tahmini olduğunu belirtir; bu dosyada **yanlış alarm** olduğunu düşünüyoruz ve Microsoft'a yanlış alarm bildirimi yapıldı (sonuç bekleniyor). Defender dosyayı engellerse: *Windows Güvenliği → Virüs ve tehdit koruması → Koruma geçmişi →* engellenen kaydı seçip *Eylemler → İzin ver*. Kaynak kodun tamamı bu depodadır; indirdiğiniz dosyanın SHA-256 değerini yukarıdaki tabloyla karşılaştırarak doğrulayabilirsiniz.
+**Microsoft Defender:** v1.1.0'da görülen `Trojan:Win32/Wacatac.B!ml` tespiti (makine öğrenmesi tahmini, yanlış alarm; Microsoft'a bildirilmişti) **v1.1.1'de yok**. Yine de bir antivirüs dosyayı engellerse: *Windows Güvenliği → Virüs ve tehdit koruması → Koruma geçmişi →* engellenen kaydı seçip *Eylemler → İzin ver*. Kaynak kodun tamamı bu depodadır; indirdiğiniz dosyanın SHA-256 değerini yukarıdaki tabloyla karşılaştırarak doğrulayabilirsiniz.
 
 Ayrıntılar, tarama sonuçları ve kendiniz doğrulama/derleme yolları: **[docs/antivirus.md](docs/antivirus.md)**.
 
